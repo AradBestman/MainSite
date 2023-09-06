@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hcontainer {
+    width: 1920px;
+    height: 62px;
+    background-color: #FFFFFF(223, 223, 223, 0.6);
+    border: 2px solid #1AE0EC;
+    display: flex;
+
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    position: sticky;
+    width: 450px;
+    height: 50px;
+
+}
+
+.sticky {
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    /* Set the background color as needed */
+    /* Add any additional styling properties for your navbar */
+
+}
+
+
+nav ul {
+    list-style-type: none;
+    height: 62px;
+    padding: 0;
+}
+
+ul li {
+    display: inline;
+    font-family: 'Heebo', sans-serif;
+
+    transition: all .7s ease;
+
+}
+
+ul li a {
+    width: 200px;
+    height: 62px;
+    text-decoration: none;
+    font-size: 1.5em;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    text-align: center;
+    padding: 15px;
+    color: #2C2C2C;
+    display: inline;
+    transition: all 4s ease;
+    line-height: 1.5;
+
+}
+
+.logo {
+    width: 100px;
+    height: 62px;
+    position: fixed;
+    left: 20px;
+    top: 0;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s ease, translate 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+    translate: translateY(-10px);
+}
+
+.headinglogo {
+    font-size: 2.5rem;
+}
+
+
+
+.headinglogo a {
+    width: 300px;
+    height: 60px;
+    position: fixed;
+    display: inline-block;
+    top: 10px;
+    left: 20px;
+    text-decoration: none;
+    color: #2C2C2C;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.headinglogo a .aLogo {
+    color: blue;
+}
+
+nav ul li a:hover {
+    background-color: #1AE0EC;
+    color: #2C2C2C;
+    transform: scale(1.5);
+    border-radius: 50%;
+}
+
+.hamburger {
+    display: none;
+}
+
+/* End of Heading */
+
+
+
+.bcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    background-color: #13E8F163;
+}
+
+.text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 4rem;
+    color: black;
+    text-align: center;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top: 200px;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+
+}
+
+.icons {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 130px;
+    background-color: #00000029;
+    /* border: 1px solid #1AE0EC; */
+}
+
+.btn1,
+.btn2 {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #1AE0EC;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Heebo', sans-serif;
+    text-decoration: none;
+}
+
+.btn2 {
+    background-color: #0AB8C8;
+}
+
+.btn1:hover,
+.btn2:hover {
+    background-color: #0AB8C8;
+}
+
+img {
+    border-radius: 50%;
+}
+
+.icon {
+    flex: 0 0 auto;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    margin-top: -10px;
+    transition: all 1000ms ease-in-out;
+    border-radius: 50%;
+
+
+
+    opacity: 0.3;
+
+
+
+
+
+}
+
+.icon:hover {
+    transform: scale(1.5);
+    box-shadow: 0 0 5px #1AE0EC;
+    border-radius: 50%;
+    opacity: 1;
+
+
+}
+
+.imgcontainer {
+    width: auto;
+}
+
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.imgcontainer {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    height: 900px;
+}
+
+.imagem {
+    margin: auto;
+}

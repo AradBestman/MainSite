@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lehovil kadima</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+        body {
+            background-image: url("./images/Path\ 15.png");
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            margin: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+
+        .container h1 {
+            color: #D3E10E;
+            font-size: 3rem;
+            text-align: center;
+            font-family: 'Varela Round', sans-serif;
+        }
+
+        .container p {
+            color: #D3E10E;
+            font-size: 1rem;
+            text-align: center;
+            font-family: 'Varela Round', sans-serif;
+        }
+
+
+
+        .container2 {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            max-width: 500px;
+            margin: 0 auto;
+            /* Center the form horizontally */
+            position: relative;
+            justify-content: flex-start;
+            align-items: flex-start;
+            direction: rtl;
+            margin-top: -200px;
+        }
+
+
+
+
+
+
+        .container2 .labelname {
+            font-family: 'Varela Round', sans-serif;
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+
+
+
+
+
+
+        }
+
+        .container2 input {
+            margin-right: 10px;
+            width: 100%;
+            height: 50px;
+            background-color: #F6F6F6;
+            border-bottom: 2px solid #D3E10E;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 300px;
+            height: 80px;
+            position: absolute;
+
+
+            padding: 0 30px;
+            border: 1px solid yellow;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            box-shadow: 10px 10px 10px;
+            background-color: #D3E10E;
+            border: 2px solid black;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-right: 600px;
+
+
+
+        }
+
+        @media (max-width: 800px) {
+            .container2 {
+                pad: 20px;
+            }
+
+            .container2 input {
+                width: 100%;
+
+            }
+
+            button {
+                flex-direction: row;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>תן לנו להוביל אותך קדימה</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, magnam!</p>
+    </div>
+
+
+    <form class="container2">
+        <label class="labelname" for="">שם</label>
+        <input type="text" name="" id="">
+        <label class="labelname" for="">דוא׳׳ל</label>
+        <input type="text" name="" id="">
+        <button>שליחה</button>
+    </form>
+
+
+
+
+</body>
+
+</html>

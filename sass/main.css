@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%) 0% 0% no-repeat padding-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+p {
+  font-size: 2rem;
+  color: whitesmoke;
+  font-family: "Varela Round", sans-serif;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  height: 62px;
+  top: 80%;
+  margin-right: 500pt;
+  direction: rtl;
+}
+
+label {
+  display: inline-block;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Varela Round", sans-serif;
+}
+
+.textform {
+  background: rgba(246, 246, 246, 0.1411764706) 0% 0% no-repeat padding-box;
+  width: 600px;
+}
+
+button {
+  background-color: darkblue;
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1rem;
+  margin-right: 5%;
+  padding: 20px 20px;
+}
+
+section h1 {
+  font-size: 12rem;
+  color: whitesmoke;
+  font-family: Satisfy;
+}
+
+section h2 {
+  font-size: 4rem;
+  color: whitesmoke;
+  font-family: "Varela Round", sans-serif;
+}
+
+@media (max-width: 800px) {
+  section {
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+  }
+  div {
+    width: 90%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+  }
+  label {
+    font-size: 1rem;
+  }
+  .textform {
+    width: 90%;
+    height: 100%;
+  }
+  section h1 {
+    font-size: 6rem;
+  }
+  section h2 {
+    font-size: 1.5rem;
+  }
+  button {
+    margin-top: 20px;
+    width: 79%;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,15 @@
+.green-background {
+    background-color: green;
+    transition: background-color 0.5s ease;
+}
+
+.container{
+    max-width: 50%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: darkcyan;
+        border: 2px solid black;
+        height: 100vh;
+}
