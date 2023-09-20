@@ -64,7 +64,8 @@ window.addEventListener("load", () => {
             document.body.style.backgroundColor = "red";
             answer.value = "";
             setTimeout(()=>{
-                window.location.reload();
+                document.body.style.backgroundColor="white";
+                // window.location.reload();
             },1500)
         }
     });

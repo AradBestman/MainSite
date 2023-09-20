@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Arad Project FullStackWeb</title>
-
+    <title> Arad Project FullStack-Web</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
-    <!--Link To The Css Style-->
+  
 
-
-    <link rel="stylesheet" href="/css/MainPage.css" !important>
+  <!--Link To The Css Style-->
+    <link rel="stylesheet" href="/css/mainPage.css" !important>
 
     <!--Link to Images-->
     <link rel="stylesheet" href="/images/">
 
-    <!--Link BootStrap-->
+   
 
 <body>
     <!--Script BootStrap-->
@@ -28,11 +26,11 @@
         crossorigin="anonymous"></script>
     <!--End Of Link Bootstrap-->
 
-    <div class="hcontainer">
+    <div id="hcontainer" class="fixed-top">
         <h2 class="headinglogo">
             <a href="MainPage.html"><span class="aLogo">A</span>rad Ariel</a>
         </h2>
-        <nav class="sticky">
+        <nav class="">
             <ul>
                 <li class="hamburger"><a href="#">&#9776;</a></li>
                 <li><a href="#">ראשי</a></li>
@@ -43,6 +41,7 @@
         </nav>
         <img id="aradlogo" class="logo" src="../images/AradLogo.jpeg" alt="Logo">
     </div>
+
 
     <div class="bcontainer">
         <h1 id="koteret">תיק עבודות</h1>
@@ -84,19 +83,20 @@
         <h2 class="aboutme">קצת עליי</h2>
         <p class="pmiddle">היי כולם,שמי ארד אריאל,כיום מתעניין ומתעסק בתחום הפולסטאק וואב ולפני התחום הזה עסקתי בתחום
             במוסיקה הפקה.</p>
-        <button class="btn1">להורדת קורות חיים</button>
+        <button class="btn1" style="background:linear-gradient(90deg, rgba(2, 0, .6, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);">להורדת קורות חיים</button>
         <h1>עבודות נבחרות</h1>
     </div>
 
     <!--CARDS-->
 
-    <div id="cards" class="container mt-5 d-flex justify-content-evenly">
+    <div id="cards" class="container mt-5 d-flex justify-content-evenly text-center">
         <div class="card-landPage" style="width: 18rem;">
             <img src="../images/HereNow.png" class="card-img-top" alt="...">
+
             <div class="card-body">
                 <h5 class="card-title">כאן ועכשיו</h5>
-                <p class="card-text">דף נחיתה ייעוץ חינם</p>
-                <a href="TemplateLandHere&Now.html" class="btn btn-outline-dark">לדף הנחיתה לחצו</a>
+                <a href="TemplateLandHere&Now.html" target="_blank" class="btn btn-outline-dark mx-auto my-5">לדף הנחיתה לחצו</a>
+                <p class="card-text"></p>
             </div>
         </div>
 
@@ -105,11 +105,8 @@
             <img src="./images/להוביל אותך קדימה.jpeg" class="card-img-top img-fluid" alt="...">
             <div class="card-body">
                 <h5 class="card-title">להוביל אותך קדימה</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
                 <a href="ForwardBlueYellow.html"
-                    class="btn btn-outline-dark">לדף הנחיתה לחצו</a>
+                    class="btn btn-outline-dark mx-auto my-5" target="_blank">לדף הנחיתה לחצו</a>
             </div>
         </div>
 
@@ -118,24 +115,19 @@
             <img src="./images/PinkForward.png" class="card-img-top img-fluid" alt="...">
             <div class="card-body">
                 <h5 class="card-title">להוביל אותך קדימה</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="MoveForwardPink.html" class="btn btn-outline-dark">לדף הנחיתה
+
+                <a href="MoveForwardPink.html" target="_blank" class="btn btn-outline-dark mx-auto my-5">לדף הנחיתה
                     לחצו</a>
             </div>
         </div>
     </div>
     <!--FourthCard-->
-    <div class="container mt-5 d-flex justify-content-evenly">
+    <div class="container mt-5 d-flex justify-content-evenly text-center">
         <div class="card-landPage" style="width: 18rem;">
             <img src="./images/Coffee.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">קפה טוב לבוקר טוב</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="CoffeeLand.html" class="btn btn-outline-dark">לדף
+                <a href="CoffeeLand.html" target="_blank" class="btn btn-outline-dark mx-auto my-5">לדף
                     הנחיתה לחצו</a>
             </div>
         </div>
@@ -143,91 +135,75 @@
             <img src="./images/GalleryPhotos.jpeg" class="card-img-top img-fluid" alt="...">
             <div class="card-body">
                 <h5 class="card-title">לגלות את העולם</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
                 <a href="GalleryLand.html"
-                    class="btn btn-outline-dark">לדף הנחיתה לחצו</a>
+                    class="btn btn-outline-dark mx-auto my-5">לדף הנחיתה לחצו</a>
             </div>
         </div>
+
         <div class="card-landPage" style="width: 18rem;">
             <img src="../images/AdviceFree.png" class="card-img-top img-fluid" alt="...">
             <div class="card-body">
                 <h5 class="ייעוץ חינם">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="AdviceFree.html"
-                    class="btn btn-outline-dark">לדף
+
+                <a href="AdviceFree.html" target="_blank"
+                    class="btn btn-outline-dark mx-auto my-5">לדף
                     הנחיתה לחצו</a>
             </div>
         </div>
     </div>
-    <br><br><br>
+    
 <!--Javascript Projects-->
+<!--First Game-->
+    <div class="container mt-5 d-flex justify-content-evenly">
+<div class="gamecard">
+    <a href="PageLoaderTemplate.html">
+            <img class="games" src="./images/PageLoader.png"
+                alt="" /></a>
+</div>
+            <!--Second Game-->
+
+    <a href="MathTemplate.html">
+        <img class="games" src="./images/Calculator.png" alt="" /></a>
+
+    <a href="memorygameTemplate.html">
+        <img class="games" src="./images/MemoryGame.png" alt="" /></a>
+    </div>
 
     <div class="container mt-5 d-flex justify-content-evenly">
-        <div class="card" style="width: 18rem;">
-            <img src="./images/PageLoader.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">בונה מסכים</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's’
-                    content.</p>
-                <a href="PageLoaderTemplate.html" class="btn btn-outline-dark">בונה מסכים</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="./images/Calculator.png" class="card-img-top img-fluid" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">לומדת חשבון</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="file:///Users/aradariel/Documents/Arad%20Project%20HTML/Template%20Land%20OLAM/TemplateLand.html"
-                    class="btn btn-outline-dark">לדף הנחיתה לחצו</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="./images/MemoryGame.png" class="card-img-top img-fluid" alt="...">
-            <div class="card-body">
-                <h5 class="ייעוץ חינם">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="file:///Users/aradariel/Documents/Arad%20Project%20HTML/Advice%20Template/TemplateLand.html"
-                    class="btn btn-outline-dark">לדף
-                    הנחיתה לחצו</a>
-            </div>
-        </div>
+        <a href="TemplateXO.html">
+            <img class="games" src="./images/XO.png" alt="" /></a>
+    
+    
+        <!--Third Game-->
+        <a href="TemplatePokedex.html">
+            <img class="games" src="./images/Pokedex.png" alt="" /></a>
+    
+        <a href="TemplateHugeman.html">
+            <img class="games" src="./images/HugeMan.png" alt="" /></a>
     </div>
     
-    
-
-
-
     <!--Form-->
     <div id="footer" class="footer">
         <img class="myimg" src="./images/Rectangle 41.png" alt="">
-
-
         <div class="Cube">
-            <h3>צור קשר</h3>
-            <p class="textform">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, nulla.</p>
-            <label class="labelname" for="">שם מלא</label>
+            <h3 class="label">צור קשר</h3>
+            <p class="textform"></p>
+            <label class="label" for="">שם מלא</label>
             <input type="text" name="" id="">
-            <label class="labelname" for="">דוא׳׳ל</label>
+            <label class="label" for="">דוא׳׳ל</label>
             <input type="text" name="" id="">
-            <label class="labelname" for="">טלפון</label>
+            <label class="label" for="">טלפון</label>
             <input type="text">
-            <label class="labelname" for="">תוכן ההודעה</label>
+            <label class="label" for="">תוכן ההודעה</label>
             <input class="inputbigger" type="text">
-            <button class="btn2">שליחה</button>
-            <audio controls source src="/Audio/Replace KICKBASS IDO BEFORE MIX 4444 ARAD Touch Final .wav">Play</audio>
-
+            <button class="btn2"> <span>
+                שליחה
+            </span ></button>
+            <audio id="audio" controls source src="/Audio/Replace KICKBASS IDO BEFORE MIX 4444 ARAD Touch Final .wav">Play</audio>
         </div>
-    </div>
-
+   </div>
+    
+<!--ICONS-->
     <div class="photos">
         <a href="https://www.facebook.com/" class="bphotos">
     <div id="face">
@@ -236,11 +212,25 @@
 </a>
 
         <div class="bphotos"><img src="../images/Icon material-location-on.svg" alt=""></div>
-        <div class="bphotos"><img src="../images/Icon awesome-linkedin-in.svg" alt=""></div>
-        <div class="bphotos"><img src="../images/Icon simple-email.svg" alt=""></div>
+        <a href="https://www.linkedin.com/in/arad-ariel-135733240/" target="_blank" class="bphotos">
+            <div id="Email">
+                <img src="./images/Icon awesome-linkedin-in.svg" alt="">
+            </div>
+        </a>
+        <a href="mailto:rdrl20014@gmail.com" target="_blank" class="bphotos">
+            <div id="Email">
+                <img src="./images/Icon simple-email.svg" alt="">
+            </div>
+        </a>
         <div class="bphotos"><img src="../images/Icon simple-whatsapp.svg" alt=""></div>
-        <div class="bphotos"><img src="../images/Icon simple-whatsapp2222.svg" alt=""></div>
+<a href="https://wa.me/0546904554" target="_blank" class="bphotos">
+    <div id="Whatsapp">
+        <img src="./images/Icon simple-whatsapp2222.svg" alt="">
     </div>
+</a>
+    </div>
+
+    <!--Last Footer ....-->
     <footer id="contact" class="footer2"
         style="display: flex; justify-content: space-between; color: #1AE0EC; border: 2px solid #1AE0EC; padding: 10px;">
         <p1 style="margin-right: auto;">כל הזכויות שמורות&copy;</p1>

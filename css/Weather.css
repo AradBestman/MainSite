@@ -46,3 +46,8 @@ body {
 *:focus {
     outline: none;
 }
+
+.col-12{
+    background-color: aliceblue;
+}
+
