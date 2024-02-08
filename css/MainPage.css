@@ -20,7 +20,6 @@ body {
     background-color: #FFFFFF(223, 223, 223, 0.6);
     border: 2px solid #1AE0EC;
     display: flex;
-
 }
 
 nav {
@@ -31,6 +30,18 @@ nav {
     position: fixed;
     z-index: 1;
 }
+input[type="checkbox"]{
+    display: none;
+}
+
+.navbar-links:checked+.hamburger {
+    display: none;
+}
+label{
+    display: none;
+}
+
+/* Show hamburger when checkbox is checked */
 
 nav ul {
     list-style-type: none;
@@ -55,6 +66,9 @@ ul li a {
     display: inline;
     transition: all 4s ease;
     line-height: 1.5;
+}
+.sticky{
+
 }
 
 .logo {
@@ -99,9 +113,6 @@ nav ul li a:hover {
     border-radius: 50%;
 }
 
-.hamburger {
-    display: none;
-}
 
 
 
@@ -589,6 +600,18 @@ input {
 }
 
 @media(max-width:550px) {
+     nav ul {
+        display: none;
+    }
+
+    /* Show nav links when checkbox is checked */
+    #menu-toggle:checked + .hamburger + nav ul {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
     ul li {
         display: none;
     }
@@ -596,10 +619,35 @@ input {
     .hamburger {
         display: block;
     }
-
-    .hamburger:hover~li {
-        display: block;
+    .nav{
+        flex-direction: column;
     }
+    input[type="checkbox"]:checked ~ #navbar-links{
+        display:block ;
+    }
+
+
+         nav ul {
+             flex-direction: column;
+         }
+    
+         ul li {
+             display: none;
+         }
+    
+         .hamburger {
+             display: block;
+         }
+    
+         /* Show nav links when hamburger is clicked */
+         input[type="checkbox"]:checked~#navbarlinks nav ul {
+             display: block;
+         }
+    
+         /* Show nav links when hamburger is hovered */
+         .hamburger:hover~nav ul li {
+             display: block;
+         }
 
     .icons {
         flex-wrap: nowrap;
@@ -611,7 +659,6 @@ input {
         flex-direction: column;
         align-items: center;
         padding: 100px 100px 100px;
-
     }
     .container-xl{
         flex-wrap: nowrap;

@@ -30,15 +30,19 @@
         <h2 class="headinglogo">
             <a href="MainPage.html"><span class="aLogo">A</span>rad Ariel</a>
         </h2>
-        <nav class="">
-            <ul>
-                <li class="hamburger"><a href="#">&#9776;</a></li>
-                <li><a href="#">ראשי</a></li>
-                <li><a href="#aboutme">אודות</a></li>
-                <li><a href="#cards">שירותים</a></li>
-                <li><a href="#footer">צור קשר</a></li>
-            </ul>
-        </nav>
+        <div id="navbar-links">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label> <!-- Use label element for the hamburger icon -->
+            <nav class="sticky">
+                <ul>
+                    <li><a href="#">ראשי</a></li>
+                    <li><a href="#aboutme">אודות</a></li>
+                    <li><a href="#cards">שירותים</a></li>
+                    <li><a href="#footer">צור קשר</a></li>
+                </ul>
+            </nav>
+        </div>
+       
         <img id="aradlogo" class="logo" src="../images/AradLogo.jpeg" alt="Logo">
     </div>
 
