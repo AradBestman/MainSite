@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 @import url("https://fonts.googleapis.com/css2?family=Heebo&family=Varela+Round&display=swap");
-/* URL For the Font Google */
 
 body {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -221,9 +220,7 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  /* height: 130px; */
   background-color: #00000029;
-  border: 1.9px solid #1ae0ec;
 }
 
 .icon {
@@ -234,11 +231,10 @@ nav ul li a:hover {
   padding: 15px;
   margin-top: 10px;
   transition: all 1000ms ease-in-out;
-  border-radius: 50%;
   opacity: 0.3;
 }
-.iconS {
-  border-radius: 50%;
+.icon img{
+  border-radius:50%
 }
 .icon:hover {
   transform: scale(1.5);
@@ -273,14 +269,18 @@ nav ul li a:hover {
   color: black;
   text-align: center;
 }
-
+.col-md-4{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 #koteret {
   color: white;
   text-align: center;
   font-size: 4rem;
   margin-top: 50px;
   padding: 5px 5px 5px;
-width: 500px;
+width: 100vw;
     margin: 50px auto;
 }
 .second-heading {
@@ -288,7 +288,7 @@ width: 500px;
     font-size: 2rem;
     text-align: center;
     padding: 3px 3px 3px;
-    width: 500px;
+    width: 100vw;
     margin: auto;
 }
 
@@ -324,6 +324,10 @@ width: 500px;
   flex-direction: row;
   justify-content: center;
   background-color: #f6f6f6;
+  padding:5rem
+}
+.custom-bg{
+  background-color:#f6f6f6;
 }
 
 .card-body {
@@ -374,12 +378,24 @@ a.btn.btn-outline-dark {
   width: 100vw;
   background-color: #3a3a3a;
   height: 50vh;
+  margin-top:2.5rem
+}
+.photos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  background-color: #1ae0ec;
+  padding: 2.5rem;
+  margin-top: 1rem;
+}
+.footer2 {
+  color: #fff;
+  padding: 10rem;
+  text-align: center;
 }
 
-
-.contact{
-  color: white;
-}
 .labelS{
   color: white;
 }
@@ -548,70 +564,32 @@ a.btn.btn-outline-dark {
   }
 }
 
-.photos {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100vw;
-  height: 10vh;
-  background-color: #1ae0ec;
-}
 
-.footer2 {
-  background-color: #000000;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
+
+
 
 @media (max-width: 550px) {
   nav ul {
-    display: none;
-  }
-
-  /* Show nav links when checkbox is checked */
-  #menu-toggle:checked + .hamburger + nav ul {
-    display: block;
-  }
-
-  nav ul {
+    display:none;
     flex-direction: column;
+    list-style-type:none;
+    padding:0;
+    margin:0;
   }
-  ul li {
-    display: none;
+
+
+
+
+  #menu-toggle:checked + .hamburger + nav ul{
+    display:flex;
   }
 
   .hamburger {
     display: block;
-  }
-  .nav {
-    flex-direction: column;
-  }
-  input[type="checkbox"]:checked ~ #navbar-links {
-    display: block;
+    cursor:pointer;
+    font-size:24px;
   }
 
-  nav ul {
-    flex-direction: column;
-  }
-
-  ul li {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  /* Show nav links when hamburger is clicked */
-  input[type="checkbox"]:checked ~ #navbarlinks nav ul {
-    display: block;
-  }
-
-  /* Show nav links when hamburger is hovered */
-  .hamburger:hover ~ nav ul li {
-    display: block;
-  }
 
   .icons {
     flex-wrap: nowrap;
@@ -622,27 +600,24 @@ a.btn.btn-outline-dark {
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
-    padding: 100px 100px 100px;
+    padding:3rem;
+
   }
+  
   .container-xl {
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
   }
 }
+
+
 audio {
   display: block;
 }
-
 .myimg {
   width: 500px;
 }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-
 .Cube {
   display: flex;
   flex-direction: column;
@@ -676,15 +651,15 @@ audio {
 }
 
 .games {
-  width: 300px;
-  height: 300px;
+  width: 18rem;
+  height: 18rem;
   border-radius: 25%;
   animation: spin 10000ms linear forwards;
   padding: 5px 5px 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 0.5rem;
 }
 
 @keyframes spin {
@@ -723,6 +698,7 @@ audio {
   height: 150px;
   box-shadow: 30px 30px 30px;
   border-radius: 20%;
+  /* padding:10px; */
   transition: all 1000ms ease-in-out;
   background-image: url("/images/PageLoader.png");
   background-size: cover;
