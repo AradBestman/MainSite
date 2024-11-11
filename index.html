@@ -13,7 +13,7 @@
 
 
 
-  <!--Link To The Css Style-->
+    <!--Link To The Css Style-->
     <link rel="stylesheet" type="text/css" href="css/mainpage.css" !important>
 
     <!--Link to Images-->
@@ -28,12 +28,18 @@
         crossorigin="anonymous"></script>
     <!--End Of Link Bootstrap-->
 
-<div id="hcontainer" class="fixed-top">
-    <h2 class="headinglogo">
+<div id="hcontainer">
+    <div class="headinglogo">
         <a href="index.html"><span class="aLogo">A</span>rad Ariel</a>
-    </h2>
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="hamburger">&#9776;</label> <!-- Hamburger icon -->
+        <img id="aradlogo" class="logo" src="images/AradLogo.jpeg" alt="Logo">
+    </div>
+
+    <!-- Checkbox for toggling the menu -->
+    <input type="checkbox" id="menu-toggle" style="display: none;">
+
+    <!-- Label for the hamburger icon -->
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+
     <nav class="sticky">
         <ul>
             <li><a href="#">Home</a></li>
@@ -42,8 +48,8 @@
             <li><a href="#footer">Contact Us</a></li>
         </ul>
     </nav>
-    <img id="aradlogo" class="logo" src="images/AradLogo.jpeg" alt="Logo">
 </div>
+
 
 
 

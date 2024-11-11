@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -11,21 +11,22 @@
 </head>
 
 <body>
-    <div class="hcontainer">
-        <h2 class="headinglogo">
-            <a href="MainPage.html"><span class="aLogo">A</span>rad Ariel</a>
-        </h2>
-        <nav class="sticky">
-            <ul>
-                <li class="hamburger"><a href="#">&#9776;</a></li>
-                <li><a href="MainPage.html">ראשי</a></li>
-                <li><a href="#">אודות</a></li>
-                <li><a href="#">שירותים</a></li>
-                <li><a href="#">צור קשר</a></li>
-            </ul>
-        </nav>
-        <img href="MainPage.html" class="logo" src="/images/AradLogo.jpeg" alt="Logo">
-    </div>
+<div id="hcontainer" class="fixed-top">
+    <h2 class="headinglogo">
+        <a href="index.html"><span class="aLogo">A</span>rad Ariel</a>
+    </h2>
+    <input style="display:none" type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label> <!-- Hamburger icon -->
+    <nav class="sticky">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#aboutme">About</a></li>
+            <li><a href="#cards">Projects</a></li>
+            <li><a href="#footer">Contact Us</a></li>
+        </ul>
+    </nav>
+    <img id="aradlogo" class="logo" src="images/AradLogo.jpeg" alt="Logo">
+</div>
 
     <div class="bcontainer">
         <!--Background Animation-->

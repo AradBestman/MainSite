@@ -13,20 +13,32 @@ body {
   overflow-x: hidden;
 }
 
-.hcontainer {
+#hcontainer {
   width: 100%;
-  height: 62px;
+  height: 7vh;
   background-color: #FFFFFF(223, 223, 223, 0.6);
-  border: 2px solid #1ae0ec;
+z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  position: fixed;
+  padding:1rem;
   top: 0;
-  z-index: 1;
 }
-
+.headinglogo{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.headinglogo a {
+height: 60px;
+  display: inline-flex;
+  text-decoration: none;
+  color: #2c2c2c;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  position: sticky;
+}
 nav {
   display: flex;
   position: sticky;
@@ -64,19 +76,21 @@ ul li a {
   width: 100px;
   height: 62px;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1.1rem;
   text-align: center;
   padding: 10px;
   color:#2c2c2c;
   display: inline;
   transition: all 4s ease;
   line-height: 1.5;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-weight: bold;
 }
 
 .logo {
   width: 75px;
   height: 60px;
-  position: fixed;
+
   right: 20px;
   top: 0;
   border-radius: 50%;
@@ -88,17 +102,7 @@ ul li a {
   transform: scale(1.2);
 }
 
-.headinglogo a {
-  width: auto;
-  height: 60px;
-  position: fixed;
-  display: inline;
-  top: 10px;
-  right: 100px;
-  text-decoration: none;
-  color: #2c2c2c;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
+
 
 .headinglogo a .aLogo {
   color: blue;
@@ -109,6 +113,7 @@ nav ul li a:hover {
   color: #2c2c2c;
   transform: scale(1.5);
   border-radius: 50%;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /*End Of the Heading*/
@@ -707,21 +712,39 @@ audio {
 
 
 @media (max-width: 550px) {
-  nav ul {
-    display:none;
+nav ul {
+    display: none;
     flex-direction: column;
-    list-style-type:none;
-    padding:0;
-    margin:0;
-  }
-  #menu-toggle:checked + .hamburger + nav ul{
-    display:flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
 
+  /* Show the menu when checkbox is checked */
+  #menu-toggle:checked+label+nav ul {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+.headinglogo a {
+  display: none;
+}
+
+  /* Hamburger icon styling */
   .hamburger {
     display: block;
-    cursor:pointer;
-    font-size:24px;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    /* Adjust if needed */
+    left: 10px;
+    /* Adjust if needed */
+    z-index: 10000;
+    /* Ensure the hamburger is clickable */
   }
   .icons {
     flex-wrap: nowrap;
