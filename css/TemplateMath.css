@@ -134,12 +134,13 @@ nav ul li a:hover {
 }
 
 p {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: black;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1rem;
     font-weight: bold;
-    text-transform: uppercase;
+}
+.footerinside{
+    color:#1AE0EC
 }
 
 .icons {
@@ -176,8 +177,8 @@ p {
     background-color: #0AB8C8;
 }
 
-.btn1:hover,
-.btn2:hover {
+.btn1:hover
+ {
     background-color: #0AB8C8;
 }
 
@@ -216,7 +217,6 @@ p {
 .footer {
     background-color: #000;
     color: #fff;
-    padding: 20px;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -224,9 +224,6 @@ p {
 }
 
 @media (max-width: 550px) {
-    body {
-        font-size: 14px;
-    }
 
     .hcontainer {
         height: auto;
@@ -237,7 +234,7 @@ p {
 
     .headinglogo {
         font-size: 1.8rem;
-        text-align: center;
+        text-align: start
     }
 
     .headinglogo a {
@@ -249,6 +246,7 @@ p {
         height: 50px;
         position: static;
         margin-top: 10px;
+        display: none;
     }
 
     .hamburger {
@@ -258,6 +256,7 @@ p {
 
     nav {
         width: 100%;
+        height: 8.5rem;
         display: none;
         /* Hidden initially to allow toggling */
     }
@@ -327,4 +326,9 @@ p {
         text-align: center;
         padding: 10px;
     }
+                .footerinside {
+                    font-size: 1rem;
+                }
 }
+
+
