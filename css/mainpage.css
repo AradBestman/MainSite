@@ -257,6 +257,7 @@ nav ul li a:hover {
   background-color: #f6f6f6;
   height: 40vh;
   margin-top: 0.5vh;
+  background-color: rgba(0, 0, 0, 0.16);
 }
 
 .about img {

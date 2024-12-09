@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -11,29 +11,30 @@
 </head>
 
 <body>
-    <div class="hcontainer">
-        <h2 class="headinglogo">
-            <a href="MainPage.html"><span class="aLogo">A</span>rad Ariel</a>
-        </h2>
-        <nav class="sticky">
-            <ul>
-                <li class="hamburger"><a href="#">&#9776;</a></li>
-                <li><a href="MainPage.html">ראשי</a></li>
-                <li><a href="#">אודות</a></li>
-                <li><a href="#">שירותים</a></li>
-                <li><a href="#">צור קשר</a></li>
-            </ul>
-        </nav>
-        <img href="MainPage.html" class="logo" src="/images/AradLogo.jpeg" alt="Logo">
-    </div>
+<div id="hcontainer" class="fixed-top">
+    <h2 class="headinglogo">
+        <a href="index.html"><span class="aLogo">A</span>rad Ariel</a>
+    </h2>
+    <input style="display:none" type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label> <!-- Hamburger icon -->
+    <nav class="sticky">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#aboutme">About</a></li>
+            <li><a href="index.html#cards">Projects</a></li>
+            <li><a href="#footer">Contact Us</a></li>
+        </ul>
+    </nav>
+    <img id="aradlogo" class="logo" src="images/AradLogo.jpeg" alt="Logo">
+</div>
 
     <div class="bcontainer">
         <!--Background Animation-->
-        <h1 class="text">שם הפרויקט</h1>
-        <p class="pstart">כאן תוכלו לראות את אחת מהעבודות שלי לאחר קורס פולסטאק ווב.</p>
-        <a href="hugmen.html" class="btn1">לצפייה בפרויקט</a>
+        <h1 class="text">Huge Man</h1>
+        <p class="pstart">Here you can find the game HugeMan</p>
+        <a href="hugmen.html" class="btn1">See project</a>
     <a href="./zip/HugeMan.zip" download>
-        <button class="btn2">להורדת הפרויקט</button>
+        <button class="btn1">Download project</button>
     </a>
 
     </div>
@@ -57,11 +58,10 @@
     <div class="imgcontainer">
         <img class="imagem" src="./images/HugeMan.png" alt="">
     </div>
-    <footer id="contact" class="footer"
-        style="display: flex; justify-content: space-between; color: #1AE0EC; border: 2px solid #1AE0EC; padding: 10px;">
-        <p1 style="margin-right: auto;">כל הזכויות שמורות&copy;</p1>
-        <p1 style="margin-left: auto;">Arad Ariel</p1>
-    </footer>
+<footer id="contact" class="footer">
+    <p class="footerinside">&copy All terms and conditions</p>
+    <p class="footerinside">Arad Ariel</p>
+</footer>
 
 </body>
 
