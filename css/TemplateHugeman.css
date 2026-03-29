@@ -219,13 +219,22 @@ p {
     width: 75%;
 }
 
-.footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
+.footer2 {
     display: flex;
-    justify-content: space-between;
-    border: 2px solid #1AE0EC;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    color: antiquewhite;
+    border: 1px solid #1ae0ec;
+    padding: 10px;
+    background-color: black;
+    text-align: center;
+    height: 80px;
+}
+
+.footer2 p {
+    margin: 0;
+    padding: 0;
 }
 
 @media (max-width: 550px) {

@@ -1,0 +1,19 @@
+/* Footer Styling */
+.footer2 {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  color: white;
+  border: 1px solid #1ae0ec;
+  padding: 10px;
+  background-color: black;
+  text-align: center;
+  height: 80px;
+  margin-top: 2rem;
+}
+
+.footer2 p {
+  margin: 0;
+  padding: 0;
+}

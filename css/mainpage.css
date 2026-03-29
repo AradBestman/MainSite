@@ -364,14 +364,19 @@ audio { display: block; width: 250px; padding: 5px; }
 /* ── Footer ── */
 .footer2 {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
   color: antiquewhite;
   border: 1px solid #1ae0ec;
   padding: 10px;
   background-color: black;
   text-align: center;
-  margin-top: 0.3rem;
   height: 80px;
+}
+.footer2 p {
+  margin: 0;
+  padding: 0;
 }
 
 /* ── Media Query ── */

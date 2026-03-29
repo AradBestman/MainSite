@@ -148,6 +148,26 @@ p {
 
 }
 
+/* ── Footer ── */
+.footer2 {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  color: white;
+  border: 1px solid #1ae0ec;
+  padding: 10px;
+  background-color: black;
+  text-align: center;
+  height: 80px;
+  margin-top: 2rem;
+}
+
+.footer2 p {
+  margin: 0;
+  padding: 0;
+}
+
 .icons {
 
     display: flex;
@@ -222,11 +242,22 @@ img {
     width: auto;
 }
 
-.footer {
-    background-color: #000000;
-    color: #fff;
-    padding: 20px;
+.footer2 {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    color: antiquewhite;
+    border: 1px solid #1ae0ec;
+    padding: 10px;
+    background-color: black;
     text-align: center;
+    height: 80px;
+}
+
+.footer2 p {
+    margin: 0;
+    padding: 0;
 }
 
 .imgcontainer {
