@@ -15,15 +15,12 @@ body {
 
 /* ── Header ── */
 #hcontainer {
-  width: 100%;
   height: 7vh;
   background-color: rgba(223, 223, 223, 0.6); /* fixed invalid value */
   z-index: 1;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  top: 0;
 }
 
 .headinglogo {
@@ -45,10 +42,13 @@ body {
 .headinglogo a .aLogo { color: blue; }
 
 .logo {
-  width: 75px;
-  height: 60px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
   transition: transform 0.3s ease;
+  padding:0.6rem
 }
 .logo:hover { transform: scale(1.2); }
 
@@ -393,20 +393,31 @@ audio { display: block; width: 250px; padding: 5px; }
   align-items: center;
   width: 100vw;
   height: 10vh;
-  background-color: #1ae0ec;
+  background: linear-gradient(90deg, rgba(2,0,0.6,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
   padding: 2.5rem;
 }
 
 #face { margin-right: 30px; }
 
-/* ── Footer ── */
+.bphotos {
+  cursor: pointer;
+}
+
+.bphotos img {
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.bphotos:hover img {
+  transform: scale(1.2);
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px #1ae0ec);
+}
 .footer2 {
   display: flex;
   justify-content: center;
   gap: 2rem;
   align-items: center;
   color: antiquewhite;
-  border: 1px solid #1ae0ec;
   padding: 10px;
   background-color: black;
   text-align: center;
