@@ -28,20 +28,20 @@
 
     <!-- Header -->
     <div id="hcontainer">
+      <nav class="sticky">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#aboutme">About</a></li>
+          <li><a href="#cards">Projects</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
       <div class="headinglogo">
         <a href="index.html"><span class="aLogo">A</span>rad Ariel</a>
         <img id="aradlogo" class="logo" src="images/AradLogo.jpeg" alt="Logo" />
       </div>
       <input type="checkbox" id="menu-toggle" style="display: none" />
       <label for="menu-toggle" class="hamburger">&#9776;</label>
-      <nav class="sticky">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#aboutme">About</a></li>
-          <li><a href="#cards">Projects</a></li>
-          <li><a href="#footer">Contact Us</a></li>
-        </ul>
-      </nav>
     </div>
 
     <!-- Hero -->
@@ -85,87 +85,72 @@
 
     <!-- About -->
 
-
     <!-- Landing Page Cards -->
-    <div id="cards" class="container-lg mt-5 custom-bg">
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-4 mb-4">
-          <div class="card text-center">
-            <img
-              src="./images/HereNow.png"
-              class="card-img-top img-fluid"
-              alt="Here Now"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Bring you forward</h5>
-              <a
-                href="TemplateLandHere&Now.html"
-                class="btn btn-outline-dark my-3"
-                target="_parent"
-                >Click to the landing page</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card text-center">
-            <img
-              src="./images/להוביל אותך קדימה.jpeg"
-              class="card-img-top img-fluid"
-              alt="Blue Yellow"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Bring you forward</h5>
-              <a
-                href="ForwardBlueYellow.html"
-                class="btn btn-outline-dark my-3"
-                target="_parent"
-                >Click to the landing page</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card text-center">
-            <img
-              src="./images/PinkForward.png"
-              class="card-img-top img-fluid"
-              alt="Pink Forward"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Bring you forward</h5>
-              <a
-                href="MoveForwardPink.html"
-                class="btn btn-outline-dark my-3"
-                target="_parent"
-                >Click to the landing page</a
-              >
-            </div>
-          </div>
+    <!-- Cards Section -->
+<div id="cards" class="container-lg py-5 custom-bg">
+  <div class="row justify-content-center">
+
+    <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-4">
+      <div class="card text-center w-100" style="max-width: 300px;">
+        <img src="./images/HereNow.png" class="card-img-top img-fluid" alt="Here Now" />
+        <div class="card-body">
+          <h5 class="card-title">Bring you forward</h5>
+          <a href="TemplateLandHere&Now.html" class="btn btn-outline-dark my-3">
+            Click to the landing page
+          </a>
         </div>
       </div>
     </div>
 
-    <!-- JS Projects Row 1 -->
-    <div class="container-lg mt-5 d-flex custom-bg">
-      <div
-        class="row container-lg mt-5 d-flex custom-bg justify-content-evenly"
-      >
-        <div class="col-md-4 mb-4">
-          <a href="PageLoaderTemplate.html"
-            ><img class="games" src="./images/PageLoader.png" alt="Page Loader"
-          /></a>
+    <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-4">
+      <div class="card text-center w-100" style="max-width: 300px;">
+        <img src="./images/להוביל אותך קדימה.jpeg" class="card-img-top img-fluid" alt="Blue Yellow" />
+        <div class="card-body">
+          <h5 class="card-title">Bring you forward</h5>
+          <a href="ForwardBlueYellow.html" class="btn btn-outline-dark my-3">
+            Click to the landing page
+          </a>
         </div>
-        <div class="col-md-4 mb-4">
-          <a href="MathTemplate.html"
-            ><img class="games" src="./images/Calculator.png" alt="Calculator"
-          /></a>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-4">
+      <div class="card text-center w-100" style="max-width: 300px;">
+        <img src="./images/PinkForward.png" class="card-img-top img-fluid" alt="Pink Forward" />
+        <div class="card-body">
+          <h5 class="card-title">Bring you forward</h5>
+          <a href="MoveForwardPink.html" class="btn btn-outline-dark my-3">
+            Click to the landing page
+          </a>
         </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+    
+    <!-- JS Projects Section -->
+    <div class="container-lg py-5 custom-bg">
+      <div class="row justify-content-evenly text-center">
+    
         <div class="col-md-4 mb-4">
-          <a href="memorygameTemplate.html"
-            ><img class="games" src="./images/MemoryGame.png" alt="Memory Game"
-          /></a>
+          <a href="PageLoaderTemplate.html">
+            <img class="games img-fluid" src="./images/PageLoader.png" alt="Page Loader" />
+          </a>
         </div>
+    
+        <div class="col-md-4 mb-4">
+          <a href="MathTemplate.html">
+            <img class="games img-fluid" src="./images/Calculator.png" alt="Calculator" />
+          </a>
+        </div>
+    
+        <div class="col-md-4 mb-4">
+          <a href="memorygameTemplate.html">
+            <img class="games img-fluid" src="./images/MemoryGame.png" alt="Memory Game" />
+          </a>
+        </div>
+    
       </div>
     </div>
 
