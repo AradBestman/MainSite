@@ -278,24 +278,33 @@ font-family: "Fjalla One", sans-serif;
 .pmiddle { color: black; font-size: 1.5rem; }
 
 /* ── Buttons ── */
+
 .btn1 {
-  display: inline-flex;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background:black
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.btn1:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+
+/* ── Buttons Container ── */
+.buttons-container {
+  display: flex;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
-  border: 0.8px solid #131316;
-  border-radius: 4.6rem;
-  font-size: 1rem;
-  gap: 1rem;
-  letter-spacing: -0.02em;
-  line-height: 137.48%;
-  padding: 1.3rem 3rem;
-  white-space: nowrap;
-  color: white;
-  text-decoration: none;
-  background: linear-gradient(90deg, rgb(2,0,1) 0%, rgb(9,9,121) 35%, rgb(0,212,255) 100%);
-  transition: transform 1000ms ease-in-out;
+  flex-wrap: wrap;
 }
-.btn1:hover { transform: scale(1.2); }
 
 /* ── Cards / Projects ── */
 .custom-bg { background-color: #f6f6f6;border-radius: 0.5rem; }
