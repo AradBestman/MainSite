@@ -1,0 +1,53 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BASE LAYOUT ===== */
+html,
+body {
+    height: 100%;
+    color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    flex: 1;
+    /* takes all available space */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+
+/* ===== FOOTER ===== */
+.footer2 {
+    margin-top: auto;
+    /* 🔥 pushes footer to bottom */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    height: 80px;
+    padding: 10px;
+
+    background-color: black;
+    color: antiquewhite;
+    border-top: 1px solid #1ae0ec;
+    text-align: center;
+}
+
+.footer2 p {
+    margin: 0;
+}
