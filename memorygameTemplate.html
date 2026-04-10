@@ -1,73 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memory Game</title>
 
-    <link rel="stylesheet" href="css/mainpage.css">
-        <link rel="stylesheet" href="css/globalTemplate.css">
-    <link rel="stylesheet" href="../images/"> 
-</head>
+    <link rel="stylesheet" href="css/mainpage.css" />
+    <link rel="stylesheet" href="css/globalTemplate.css" />
+    <link rel="stylesheet" href="../images/" />
+  </head>
 
-<body>
-  <main>
-  <!-- Header -->
-    <div id="hcontainer">
-      <input type="checkbox" id="menu-toggle" style="display: none" />
-      <label for="menu-toggle" class="hamburger">&#9776;</label>
-      <div class="headinglogo">
-        <a href="index.html"><span class="aLogo">A</span>rad Ariel</a>
-        <img id="aradlogo" class="logo" src="images/AradLogo.jpeg" alt="Logo" />
-      </div>
-      <nav class="sticky">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#aboutme">About</a></li>
-          <li><a href="#cards">Projects</a></li>
-          <li><a href="#footer">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="bcontainer">
-        <!--Background Animation-->
-        <h1 class="text">Memory Game</h1>
-        <div class="buttons-container">
-            <a href="MemoryGame.html" class="btn1">See Project</a>
-            <a href="/zip/sass.zip" download>
-                <button class="btn1">Download Project</button>
-            </a>
+  <body>
+    <main>
+      <!-- Header -->
+      <div id="hcontainer">
+        <input type="checkbox" id="menu-toggle" style="display: none" />
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <div class="headinglogo">
+          <a href="index.html"><span class="aLogo">A</span>rad Ariel</a>
+          <img
+            id="aradlogo"
+            class="logo"
+            src="images/AradLogo.jpeg"
+            alt="Logo"
+          />
         </div>
+        <nav class="sticky">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#aboutme">About</a></li>
+            <li><a href="#cards">Projects</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
 
-    </div>
+      <div class="bcontainer">
+        <span>
+          <h1 class="text">Memory Game</h1>
+          <div class="buttons-container">
+            <a href="MemoryGame.html">
+              <button>
+                <svg height="24" width="24" viewBox="0 0 24 24">
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                See Project
+              </button>
+            </a>
+            <a href="/zip/sass.zip" download>
+              <button>
+                <svg height="24" width="24" viewBox="0 0 24 24">
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                    fill="currentColor"></path>
+                </svg>
+                Download Project
 
+              </button>
+            </a>
+          </div>
+        </span>
+        <!--Background Animation-->
+      </div>
 
+      <div class="icons">
+        <div class="icon icon11">
+          <img src="/images/img-NodeJS.png" alt="" />
+        </div>
+        <div class="icon icon10">
+          <img src="/images/img-React.png" alt="" />
+        </div>
+        <div class="icon icon9"><img src="/images/img-API.png" alt="" /></div>
+        <div class="icon icon8">
+          <img src="/images/img-TypeScript.png" alt="" />
+        </div>
+        <div class="icon icon7"><img src="/images/img-ES6.png" alt="" /></div>
+        <div class="icon icon6"><img src="/images/img-OOP.png" alt="" /></div>
+        <div class="icon icon5"><img src="/images/img-JS.png" alt="" /></div>
+        <div class="icon icon4"><img src="/images/img-SASS.png" alt="" /></div>
+        <div class="icon icon3">
+          <img src="/images/img-Bootstrap.png" alt="" />
+        </div>
+        <div class="icon icon2"><img src="/images/img-CSS.png" alt="" /></div>
+        <div class="icon icon1"><img src="/images/img-HTML.png" alt="" /></div>
+      </div>
+    </main>
 
-    <div class="icons">
-        <div class="icon icon11"><img src="/images/img-NodeJS.png" alt=""></div>
-        <div class="icon icon10"><img src="/images/img-React.png" alt=""></div>
-        <div class="icon icon9"><img src="/images/img-API.png" alt=""></div>
-        <div class="icon icon8"><img src="/images/img-TypeScript.png" alt=""></div>
-        <div class="icon icon7"><img src="/images/img-ES6.png" alt=""></div>
-        <div class="icon icon6"><img src="/images/img-OOP.png" alt=""></div>
-        <div class="icon icon5"><img src="/images/img-JS.png" alt=""></div>
-        <div class="icon icon4"><img src="/images/img-SASS.png" alt=""></div>
-        <div class="icon icon3"><img src="/images/img-Bootstrap.png" alt=""></div>
-        <div class="icon icon2"><img src="/images/img-CSS.png" alt=""></div>
-        <div class="icon icon1"><img src="/images/img-HTML.png" alt=""></div>
-    </div>
-  </main>
-   
-  <!-- Footer -->
-  <footer id="contact" class="footer2">
-    <p>&copy; All terms and conditions</p>
-    <p>Arad Ariel</p>
-  </footer>
-
-
-</body>
-
+    <!-- Footer -->
+    <footer id="contact" class="footer2">
+      <p>&copy; All terms and conditions</p>
+      <p>Arad Ariel</p>
+    </footer>
+  </body>
 </html>
