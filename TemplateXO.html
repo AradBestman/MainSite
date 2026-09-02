@@ -1,89 +1,124 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Land</title>
-    <link rel="stylesheet" href="css/mainpage.css">
-        <link rel="stylesheet" href="css/globalTemplate.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe — Arad Ariel</title>
+  <meta name="description" content="Tic Tac Toe — a two-player Tic Tac Toe game with win detection, built in vanilla JavaScript." />
+  <meta name="theme-color" content="#faf9f7" />
+  <link rel="icon" href="images/AradLogo.jpeg" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" />
+
+  <link rel="stylesheet" href="css/site.css" />
+</head>
 <body>
-  <main>
-      <div id="hcontainer">
-      <input type="checkbox" id="menu-toggle" style="display: none" />
-      <label for="menu-toggle" class="hamburger">&#9776;</label>
-      <div class="headinglogo">
-        <a href="index.html"><span class="aLogo">A</span>rad Ariel</a>
-        <img id="aradlogo" class="logo" src="images/AradLogo.jpeg" alt="Logo" />
-      </div>
-      <nav class="sticky">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="scroll-sentinel"></div>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <span class="brand-mark font-mono">A</span>rad Ariel
+        <img class="brand-photo" src="images/AradLogo.jpeg" alt="" />
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#aboutme">About</a></li>
-          <li><a href="#cards">Projects</a></li>
-          <li><a href="#footer">Contact</a></li>
+          <li><a href="index.html#top">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </nav>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
+        <span class="nav-toggle-icon"></span>
+      </button>
     </div>
 
-    <div class="bcontainer">
-      <span>
-        <h1 class="text">XO 1 V.S 1</h1>
-        <div class="buttons-container">
-          <button>
-            <svg height="24" width="24" viewBox="0 0 24 24">
-              <path d="M0 0h24v24H0z" fill="none"></path>
-              <path
-                d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
-                fill="currentColor"></path>
-            </svg>
-              <a href="XO.html">See project</a>
-          </button>
-          <button>
-            <svg height="24" width="24" viewBox="0 0 24 24">
-            <path d="M0 0h24v24H0z" fill="none"></path>
-            <path
-              d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
-              fill="currentColor"></path>
-          </svg>
-               <a href="/zip/XO.zip" download>
-                Download Project
-            </a>
-          </button>
-         
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>
+      <ul>
+        <li><a href="index.html#top">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section" style="padding-block: var(--space-16) var(--section-y);">
+      <div class="container" style="max-width: 46rem;">
+        <a class="back-link" href="index.html#work">
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to work
+        </a>
+
+        <p class="hero-eyebrow">Project</p>
+        <h1 style="margin-bottom: var(--space-4);">Tic Tac Toe</h1>
+        <p class="hero-lede" style="margin-bottom: var(--space-6);">A two-player Tic Tac Toe game with win detection, built in vanilla JavaScript.</p>
+
+        <ul class="tech-list">
+              <li>JavaScript</li>
+        </ul>
+
+        <div class="hero-actions" style="margin-bottom: var(--space-12);">
+          <a class="btn btn--primary" href="XO.html">View live project</a>
+          <a class="btn btn--ghost" href="zip/XO.zip" download>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v8m0 0l-3-3m3 3l3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download source
+          </a>
         </div>
-      </span>
-        <!--Background Animation-->
-        
 
-    </div>
-
-
-
-    <div class="icons">
-        <div class="icon icon11"><img src="/images/img-NodeJS.png" alt=""></div>
-        <div class="icon icon10"><img src="/images/img-React.png" alt=""></div>
-        <div class="icon icon9"><img src="/images/img-API.png" alt=""></div>
-        <div class="icon icon8"><img src="/images/img-TypeScript.png" alt=""></div>
-        <div class="icon icon7"><img src="/images/img-ES6.png" alt=""></div>
-        <div class="icon icon6"><img src="/images/img-OOP.png" alt=""></div>
-        <div class="icon icon5"><img src="/images/img-JS.png" alt=""></div>
-        <div class="icon icon4"><img src="/images/img-SASS.png" alt=""></div>
-        <div class="icon icon3"><img src="/images/img-Bootstrap.png" alt=""></div>
-        <div class="icon icon2"><img src="/images/img-CSS.png" alt=""></div>
-        <div class="icon icon1"><img src="/images/img-HTML.png" alt=""></div>
-    </div>
+        <figure class="featured-media" style="aspect-ratio: 16 / 10; margin: 0;">
+          <img src="images/XO.png" alt="Tic Tac Toe project screenshot" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </section>
   </main>
-  <!-- Header -->
-  
-  <!-- Footer -->
-  <footer id="contact" class="footer2">
-    <p>&copy; All terms and conditions</p>
-    <p>Arad Ariel</p>
-  </footer>
-</body>
 
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <p class="footer-brand">Arad Ariel</p>
+          <p class="footer-tagline">Front-end developer building clean, functional web interfaces.</p>
+        </div>
+
+        <ul class="social-list">
+          <li>
+            <a href="https://www.facebook.com/" aria-label="Facebook">
+              <svg viewBox="0 0 22 41" fill="none" aria-hidden="true"><path d="M22.128,23.061l1.139-7.419H16.147V10.826c0-2.03.994-4.008,4.183-4.008h3.237V.5A39.469,39.469,0,0,0,17.822,0c-5.863,0-9.7,3.554-9.7,9.987v5.655H1.609v7.419H8.127V41h8.021V23.061Z" transform="translate(-1.609)" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/arad-ariel-135733240/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 41 41" fill="none" aria-hidden="true"><path d="M9.178,41H.677V13.627h8.5ZM4.923,9.893a4.946,4.946,0,1,1,4.923-4.97A4.964,4.964,0,0,1,4.923,9.893ZM40.992,41H32.51V27.676c0-3.176-.064-7.248-4.42-7.248-4.42,0-5.1,3.45-5.1,7.02V41H14.5V13.627h8.153v3.734h.119a8.932,8.932,0,0,1,8.043-4.42C39.42,12.941,41,18.606,41,25.964V41Z" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:rdrl20014@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 38 41" fill="none" aria-hidden="true"><path d="M38.821,18.922a21.142,21.142,0,0,1-.681,4.586,13.27,13.27,0,0,1-1.783,4.027A9.409,9.409,0,0,1,33.334,30.4a8.531,8.531,0,0,1-4.414,1.089,6.4,6.4,0,0,1-3.192-.781,5.466,5.466,0,0,1-2.157-2.211A6.837,6.837,0,0,1,17.786,31.4a5.882,5.882,0,0,1-5.049-2.716,8.889,8.889,0,0,1-1.255-3.146,13.567,13.567,0,0,1-.164-4.1,19.064,19.064,0,0,1,1.25-5.026,13.662,13.662,0,0,1,2.311-3.85A9.775,9.775,0,0,1,18.055,10.1a8.864,8.864,0,0,1,3.863-.858,12.012,12.012,0,0,1,2.311.2,9.458,9.458,0,0,1,1.793.538,9.7,9.7,0,0,1,1.486.784c.453.292.909.594,1.363.9L27.749,24.575a4.292,4.292,0,0,0,.033,1.511,2.115,2.115,0,0,0,.461.932,1.66,1.66,0,0,0,.748.487,2.777,2.777,0,0,0,2.628-.517A5.6,5.6,0,0,0,33.029,25.2a11.549,11.549,0,0,0,.948-2.7,18.491,18.491,0,0,0,.415-3.356,21.447,21.447,0,0,0-.528-6.271,12.466,12.466,0,0,0-2.321-4.852A10.778,10.778,0,0,0,27.382,4.9a15.1,15.1,0,0,0-6.061-1.109,13.383,13.383,0,0,0-5.995,1.307,13.754,13.754,0,0,0-4.555,3.622A17.384,17.384,0,0,0,7.79,14.164a24.555,24.555,0,0,0-1.255,6.789,22.575,22.575,0,0,0,.64,6.927,12.511,12.511,0,0,0,2.531,4.965,10.562,10.562,0,0,0,4.288,2.982,16.45,16.45,0,0,0,5.918.989A20.269,20.269,0,0,0,23.8,36.4c.64-.128,1.248-.282,1.827-.451a13.748,13.748,0,0,0,1.573-.564l.812,3.653a9.015,9.015,0,0,1-1.76.871,16.942,16.942,0,0,1-2.08.6A20.3,20.3,0,0,1,19.823,41,22.785,22.785,0,0,1,11.9,39.721a14.579,14.579,0,0,1-5.774-3.8,15.945,15.945,0,0,1-3.466-6.269,26.739,26.739,0,0,1-.968-8.7A26.54,26.54,0,0,1,3.358,12.6,20.669,20.669,0,0,1,7.37,5.966a18.281,18.281,0,0,1,6.12-4.378A19.162,19.162,0,0,1,21.416,0,20.005,20.005,0,0,1,29.1,1.376,14.938,14.938,0,0,1,34.64,5.244a15.875,15.875,0,0,1,3.289,5.977A22.853,22.853,0,0,1,38.821,18.922Zm-22,2.511a8.715,8.715,0,0,0,.451,4.322,2.317,2.317,0,0,0,2.229,1.46,2.462,2.462,0,0,0,.763-.141,2.722,2.722,0,0,0,.879-.528,4.689,4.689,0,0,0,.892-1.076,8.257,8.257,0,0,0,.82-1.819l.876-10.032a5.234,5.234,0,0,0-1.363-.179,4.712,4.712,0,0,0-2.267.52,4.488,4.488,0,0,0-1.606,1.527A8.966,8.966,0,0,0,17.427,18a21.3,21.3,0,0,0-.6,3.433Z" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/972546904554" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 43 41" fill="none" aria-hidden="true"><path d="M33.921,23.624c-.886-.442-5.2-2.553-6.007-2.844s-1.393-.442-1.982.442-2.27,2.839-2.78,3.422-1.028.618-1.9.221a23.9,23.9,0,0,1-7.076-4.373,26.715,26.715,0,0,1-4.888-6.1c-.512-.883-.056-1.369.383-1.811.4-.4.886-1.016,1.328-1.54a7.465,7.465,0,0,0,.875-1.461A1.619,1.619,0,0,0,11.8,8.042c-.221-.442-1.979-4.77-2.715-6.5C8.377-.174,7.65.044,7.105.044,6.6,0,6.013,0,5.424,0A3.319,3.319,0,0,0,3.077,1.057,9.83,9.83,0,0,0,0,8.345c0,4.284,3.151,8.436,3.589,9.055.439.574,6.2,9.408,15.017,13.206,2.1.883,3.74,1.413,5.018,1.852a12.183,12.183,0,0,0,5.536.356c1.69-.268,5.2-2.123,5.936-4.2a7.289,7.289,0,0,0,.53-4.2c-.218-.4-.8-.618-1.678-1.016" transform="translate(7.978) rotate(14)" fill="currentColor"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Arad Ariel. All rights reserved.</p>
+        <p>Built with HTML, CSS &amp; JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site.js" defer></script>
+</body>
 </html>
