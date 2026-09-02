@@ -1,238 +1,349 @@
 <!doctype html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arad Portfolio</title>
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" type="text/css" href="css/mainpage.css" />
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arad Ariel — Front-end Developer</title>
+  <meta name="description" content="Portfolio of Arad Ariel — landing pages, browser games and small web apps built with HTML, CSS, JavaScript, React and Node." />
+  <meta name="theme-color" content="#faf9f7" />
+  <meta property="og:title" content="Arad Ariel — Front-end Developer" />
+  <meta property="og:description" content="Landing pages, browser games and small web apps built with HTML, CSS, JavaScript, React and Node." />
+  <meta property="og:image" content="images/AradLogo.jpeg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="images/AradLogo.jpeg" />
 
-  <body>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    ></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" />
 
-    <!-- Header -->
-    <div id="hcontainer">
-      <input type="checkbox" id="menu-toggle" style="display: none" />
-      <label for="menu-toggle" class="hamburger">&#9776;</label>      <div class="headinglogo">
-        <a href="index.html"><span class="aLogo">A</span>rad Ariel</a>
-        <img id="aradlogo" class="logo" src="images/AradLogo.jpeg" alt="Logo" />
-      </div>
-      <nav class="sticky">
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="scroll-sentinel"></div>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#top">
+        <span class="brand-mark font-mono">A</span>rad Ariel
+        <img class="brand-photo" src="images/AradLogo.jpeg" alt="" />
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#aboutme">About</a></li>
-          <li><a href="#cards">Projects</a></li>
-          <li><a href="#footer">Contact</a></li>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
+        <span class="nav-toggle-icon"></span>
+      </button>
     </div>
 
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
     <!-- Hero -->
-    <div class="bcontainer">
-      <span>
-        <h1 id="koteret">Arad Ariel</h1>
-        <h3 class="second-heading">Here you can see part of my projects</h3>
-      </span>
-      <div class="box">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <section class="hero" id="top">
+      <div class="container">
+        <div>
+          <p class="hero-eyebrow">Front-end developer</p>
+          <h1>Building clean, functional interfaces&nbsp;— <em>from landing pages to full browser apps.</em></h1>
+          <p class="hero-lede">
+            I design and build small web products end to end: static landing pages,
+            interactive browser games and API-driven apps, using HTML, CSS, JavaScript,
+            React and Node.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#work">View work</a>
+            <a class="btn btn--ghost" href="zip/CV- Arad_Ariel.pdf" download>Download CV</a>
+          </div>
+        </div>
+        <img class="hero-portrait" src="images/AradLogo.jpeg" alt="Portrait of Arad Ariel" width="320" height="400" />
       </div>
-    </div>
-
-    <!-- Tech Icons -->
-    <div class="icons">
-      <div class="icon"><img src="images/img-NodeJS.png" alt="NodeJS" /></div>
-      <div class="icon"><img src="images/img-React.png" alt="React" /></div>
-      <div class="icon"><img src="images/img-API.png" alt="API" /></div>
-      <div class="icon">
-        <img src="images/img-TypeScript.png" alt="TypeScript" />
-      </div>
-      <div class="icon"><img src="images/img-ES6.png" alt="ES6" /></div>
-      <div class="icon"><img src="images/img-OOP.png" alt="OOP" /></div>
-      <div class="icon"><img src="images/img-JS.png" alt="JavaScript" /></div>
-      <div class="icon"><img src="images/img-SASS.png" alt="SASS" /></div>
-      <div class="icon">
-        <img src="images/img-Bootstrap.png" alt="Bootstrap" />
-      </div>
-      <div class="icon"><img src="images/img-CSS.png" alt="CSS" /></div>
-      <div class="icon"><img src="images/img-HTML.png" alt="HTML" /></div>
-    </div>
+    </section>
 
     <!-- About -->
-
-    <!-- Landing Page Cards -->
-    <!-- Cards Section -->
-<div id="cards" class="container-lg py-5 custom-bg">
-  <div class="row justify-content-center">
-
-    <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-4">
-      <div class="card text-center w-100" style="max-width: 300px;">
-        <img src="./images/HereNow.png" class="card-img-top img-fluid" alt="Here Now" />
-        <div class="card-body">
-          <h5 class="card-title">Here Now</h5>
-          <a href="TemplateLandHere&Now.html" class="btn btn-outline-dark my-3">
-            Click to the landing page
-          </a>
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-label">01 — About</p>
+          <div>
+            <h2>A developer who likes to finish what they start</h2>
+          </div>
+        </div>
+        <div class="about-body" style="max-width: var(--container-narrow); margin-left: auto;">
+          <p>
+            I build for the web with HTML, CSS and JavaScript at the core, and reach for
+            React, Node and TypeScript when a project calls for it. Most of the work on
+            this site is exactly that: landing pages built from scratch, and small browser
+            apps — a calculator, a memory game, a Pokédex pulling live data from an API —
+            each one built to actually work, not just look finished.
+          </p>
+          <p>
+            I care about clean structure as much as visual polish: semantic markup,
+            readable CSS, and JavaScript that does only what it needs to.
+          </p>
+          <!-- TODO(arad): replace with real bio — years active, focus areas, availability -->
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-4">
-      <div class="card text-center w-100" style="max-width: 300px;">
-        <img src="./images/להוביל אותך קדימה.jpeg" class="card-img-top img-fluid" alt="Blue Yellow" />
-        <div class="card-body">
-          <h5 class="card-title">Move Forward</h5>
-          <a href="ForwardBlueYellow.html" class="btn btn-outline-dark my-3">
-            Click to the landing page
-          </a>
+    <!-- Skills -->
+    <section class="section section--subtle" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-label">02 — Skills</p>
+          <div>
+            <h2>Tools I build with</h2>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-4">
-      <div class="card text-center w-100" style="max-width: 300px;">
-        <img src="./images/PinkForward.png" class="card-img-top img-fluid" alt="Pink Forward" />
-        <div class="card-body">
-          <h5 class="card-title">Bring you forward</h5>
-          <a href="MoveForwardPink.html" class="btn btn-outline-dark my-3">
-            Click to the landing page
-          </a>
-        </div>
-      </div>
-    </div>
+        <div class="skills-groups">
+          <div>
+            <p class="skills-group-label">Languages</p>
+            <div class="skills-grid">
+              <div class="skill-chip"><img src="images/img-HTML.png" alt="" /><span>HTML</span></div>
+              <div class="skill-chip"><img src="images/img-CSS.png" alt="" /><span>CSS</span></div>
+              <div class="skill-chip"><img src="images/img-JS.png" alt="" /><span>JavaScript</span></div>
+              <div class="skill-chip"><img src="images/img-TypeScript.png" alt="" /><span>TypeScript</span></div>
+              <div class="skill-chip"><img src="images/img-ES6.png" alt="" /><span>ES6</span></div>
+            </div>
+          </div>
 
-  </div>
-</div>
-    
-    <!-- JS Projects Section -->
-    <div class="container-lg py-5 custom-bg">
-      <div class="row justify-content-evenly text-center">
-    
-        <div class="col-md-4 mb-4">
-          <a href="PageLoaderTemplate.html">
-            <img class="games img-fluid" src="./images/PageLoader.png" alt="Page Loader" />
-          </a>
-        </div>
-    
-        <div class="col-md-4 mb-4">
-          <a href="MathTemplate.html">
-            <img class="games img-fluid" src="./images/Calculator.png" alt="Calculator" />
-          </a>
-        </div>
-    
-        <div class="col-md-4 mb-4">
-          <a href="memorygameTemplate.html">
-            <img class="games img-fluid" src="./images/MemoryGame.png" alt="Memory Game" />
-          </a>
-        </div>
-    
-      </div>
-    </div>
+          <div>
+            <p class="skills-group-label">Frameworks &amp; libraries</p>
+            <div class="skills-grid">
+              <div class="skill-chip"><img src="images/img-React.png" alt="" /><span>React</span></div>
+              <div class="skill-chip"><img src="images/img-NodeJS.png" alt="" /><span>Node.js</span></div>
+              <div class="skill-chip"><img src="images/img-Bootstrap.png" alt="" /><span>Bootstrap</span></div>
+              <div class="skill-chip"><img src="images/img-SASS.png" alt="" /><span>SASS</span></div>
+              <div class="skill-chip"><img src="images/img-API.png" alt="" /><span>APIs</span></div>
+            </div>
+          </div>
 
-    <!-- JS Projects Row 2 -->
-    <div class="container-lg mt-5 d-flex justify-content-evenly custom-bg">
-      <div
-        class="row container-lg mt-5 d-flex custom-bg justify-content-evenly"
-      >
-        <div class="col-md-4 mb-4">
-          <a href="TemplateXO.html"
-            ><img class="games" src="./images/XO.png" alt="XO Game"
-          /></a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="TemplatePokedex.html"
-            ><img class="games" src="./images/Pokedex.png" alt="Pokedex"
-          /></a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="TemplateHugeman.html"
-            ><img class="games" src="./images/HugeMan.png" alt="Hugeman"
-          /></a>
+          <div>
+            <p class="skills-group-label">Concepts</p>
+            <div class="skills-grid">
+              <div class="skill-chip"><img src="images/img-OOP.png" alt="" /><span>OOP</span></div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div id="aboutme" class="about">
-      <div>
-        <img src="images/AradLogo.jpeg" alt="Arad Ariel" />
-        <a href="zip/CV- Arad_Ariel.pdf" download>
-          <button class="btn1">Download CV</button>
-        </a>
-      </div>
-    </div>
-    <!-- Contact Form -->
-    <div id="footer" class="FormContainer">
-      <!-- <img class="myimg" src="./images/Rectangle 41.png" alt="" /> -->
-      <div class="Cube">
-        <h3 class="contact">Contact Me</h3>
-        <label class="labelS" for="fullname">Full Name</label>
-        <input class="inputS" type="text" id="fullname" />
-        <label class="labelS" for="email">Email</label>
-        <input class="inputS" type="email" id="email" />
-        <label class="labelS" for="phone">Phone</label>
-        <input class="inputS" type="tel" id="phone" />
-        <label class="labelS" for="content">Content</label>
-        <input id="inputBigger" type="text" />
-        <button class="btn2"><span>Send</span></button>
-        <audio id="audio" controls>
-          <source src="/Audio/Replace KICKBASS IDO BEFORE MIX 4444 ARAD Touch Final .wav" />
-        </audio>
-      </div>
-     
-    </div>
+    </section>
 
-    <!-- Social Icons -->
-    <div class="photos">
-      <a href="https://www.facebook.com/" class="bphotos">
-        <div id="face">
-          <img src="images/Icon awesome-facebook-f.svg" alt="Facebook" />
+    <!-- Work -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-label">03 — Work</p>
+          <div>
+            <h2>Selected projects</h2>
+            <p class="section-intro">Nine projects: three landing pages built from scratch, and six interactive browser apps.</p>
+          </div>
         </div>
-      </a>
-      <div class="bphotos">
-        <img src="images/Icon material-location-on.svg" alt="Location" />
-      </div>
-      <a
-        href="https://www.linkedin.com/in/arad-ariel-135733240/"
-        target="_blank"
-        class="bphotos"
-      >
-        <img src="./images/Icon awesome-linkedin-in.svg" alt="LinkedIn" />
-      </a>
-      <a href="mailto:rdrl20014@gmail.com" target="_blank" class="bphotos">
-        <img src="./images/Icon simple-email.svg" alt="Email" />
-      </a>
-      <a href="https://wa.me/0546904554" target="_blank" class="bphotos">
-        <img src="./images/Icon simple-whatsapp2222.svg" alt="WhatsApp" />
-      </a>
-    </div>
 
-    <!-- Footer -->
-    <footer id="contact" class="footer2">
-      <p>&copy; All terms and conditions</p>
-      <p>Arad Ariel</p>
-    </footer>
-  </body>
+        <div class="work-featured">
+          <article class="featured-item js-reveal">
+            <div class="featured-media">
+              <img src="images/HereNow.png" alt="Here Now landing page — full-page hero and section layout" loading="lazy" decoding="async" />
+            </div>
+            <div class="featured-body">
+              <p class="featured-index">01</p>
+              <h3>Here Now</h3>
+              <p>A single-page landing site built from scratch with hand-written HTML and SCSS.</p>
+              <ul class="tech-list">
+                <li>HTML</li><li>SCSS</li><li>CSS</li>
+              </ul>
+              <a class="project-link" href="TemplateLandHere&amp;Now.html">
+                View project
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="featured-item js-reveal">
+            <div class="featured-media">
+              <img src="images/להוביל אותך קדימה.jpeg" alt="Move Forward landing page — blue and yellow hero section" loading="lazy" decoding="async" />
+            </div>
+            <div class="featured-body">
+              <p class="featured-index">02</p>
+              <h3>Move Forward</h3>
+              <p>A blue-and-yellow landing page with a focused call to action.</p>
+              <ul class="tech-list">
+                <li>HTML</li><li>CSS</li>
+              </ul>
+              <a class="project-link" href="ForwardBlueYellow.html">
+                View project
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="featured-item js-reveal">
+            <div class="featured-media">
+              <img src="images/PinkForward.png" alt="Bring You Forward landing page — pink hero section" loading="lazy" decoding="async" />
+            </div>
+            <div class="featured-body">
+              <p class="featured-index">03</p>
+              <h3>Bring You Forward</h3>
+              <p>A pink-toned variant landing page exploring a different visual direction on the same concept.</p>
+              <ul class="tech-list">
+                <li>HTML</li><li>CSS</li>
+              </ul>
+              <a class="project-link" href="MoveForwardPink.html">
+                View project
+                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="work-index">
+          <div class="work-row js-reveal">
+            <p class="work-row-num font-mono">04</p>
+            <h3 class="work-row-title"><a href="PageLoaderTemplate.html">Page Loader</a></h3>
+            <div class="work-row-tags"><span>JavaScript</span><span>DOM</span></div>
+            <svg class="work-row-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="work-row-thumb"><img src="images/PageLoader.png" alt="" loading="lazy" decoding="async" /></div>
+          </div>
+
+          <div class="work-row js-reveal">
+            <p class="work-row-num font-mono">05</p>
+            <h3 class="work-row-title"><a href="MathTemplate.html">Calculator</a></h3>
+            <div class="work-row-tags"><span>JavaScript</span></div>
+            <svg class="work-row-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="work-row-thumb"><img src="images/Calculator.png" alt="" loading="lazy" decoding="async" /></div>
+          </div>
+
+          <div class="work-row js-reveal">
+            <p class="work-row-num font-mono">06</p>
+            <h3 class="work-row-title"><a href="memorygameTemplate.html">Memory Game</a></h3>
+            <div class="work-row-tags"><span>JavaScript</span></div>
+            <svg class="work-row-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="work-row-thumb"><img src="images/MemoryGame.png" alt="" loading="lazy" decoding="async" /></div>
+          </div>
+
+          <div class="work-row js-reveal">
+            <p class="work-row-num font-mono">07</p>
+            <h3 class="work-row-title"><a href="TemplateXO.html">Tic Tac Toe</a></h3>
+            <div class="work-row-tags"><span>JavaScript</span></div>
+            <svg class="work-row-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="work-row-thumb"><img src="images/XO.png" alt="" loading="lazy" decoding="async" /></div>
+          </div>
+
+          <div class="work-row js-reveal">
+            <p class="work-row-num font-mono">08</p>
+            <h3 class="work-row-title"><a href="TemplatePokedex.html">Pokédex</a></h3>
+            <div class="work-row-tags"><span>JavaScript</span><span>API</span></div>
+            <svg class="work-row-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="work-row-thumb"><img src="images/Pokedex.png" alt="" loading="lazy" decoding="async" /></div>
+          </div>
+
+          <div class="work-row js-reveal">
+            <p class="work-row-num font-mono">09</p>
+            <h3 class="work-row-title"><a href="TemplateHugeman.html">Huge Man</a></h3>
+            <div class="work-row-tags"><span>JavaScript</span></div>
+            <svg class="work-row-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="work-row-thumb"><img src="images/HugeMan.png" alt="" loading="lazy" decoding="async" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--subtle" id="contact">
+      <div class="container">
+        <div class="contact-layout">
+          <p class="section-label">04 — Contact</p>
+          <div>
+            <h2 style="margin-bottom: var(--space-3);">Get in touch</h2>
+            <p class="section-intro" style="margin-bottom: var(--space-8);">Have a project in mind, or just want to say hi? Send a message below.</p>
+
+            <form class="contact-form" data-mailto="rdrl20014@gmail.com" novalidate>
+              <div class="field">
+                <label for="fullname">Full name</label>
+                <input class="" type="text" id="fullname" name="fullname" autocomplete="name" required />
+                <p class="field-error" role="alert"></p>
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required />
+                <p class="field-error" role="alert"></p>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone <span style="color: var(--text-faint); font-weight: 400;">(optional)</span></label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" />
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <p class="field-error" role="alert"></p>
+              </div>
+
+              <button class="btn btn--primary" type="submit" style="justify-self: start;">Send message</button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <p class="footer-brand">Arad Ariel</p>
+          <p class="footer-tagline">Front-end developer building clean, functional web interfaces.</p>
+        </div>
+
+        <ul class="social-list">
+          <li>
+            <!-- TODO(arad): Facebook link currently points at facebook.com — replace with the real profile URL -->
+            <a href="https://www.facebook.com/" aria-label="Facebook">
+              <svg viewBox="0 0 22 41" fill="none" aria-hidden="true"><path d="M22.128,23.061l1.139-7.419H16.147V10.826c0-2.03.994-4.008,4.183-4.008h3.237V.5A39.469,39.469,0,0,0,17.822,0c-5.863,0-9.7,3.554-9.7,9.987v5.655H1.609v7.419H8.127V41h8.021V23.061Z" transform="translate(-1.609)" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/arad-ariel-135733240/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 41 41" fill="none" aria-hidden="true"><path d="M9.178,41H.677V13.627h8.5ZM4.923,9.893a4.946,4.946,0,1,1,4.923-4.97A4.964,4.964,0,0,1,4.923,9.893ZM40.992,41H32.51V27.676c0-3.176-.064-7.248-4.42-7.248-4.42,0-5.1,3.45-5.1,7.02V41H14.5V13.627h8.153v3.734h.119a8.932,8.932,0,0,1,8.043-4.42C39.42,12.941,41,18.606,41,25.964V41Z" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:rdrl20014@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 38 41" fill="none" aria-hidden="true"><path d="M38.821,18.922a21.142,21.142,0,0,1-.681,4.586,13.27,13.27,0,0,1-1.783,4.027A9.409,9.409,0,0,1,33.334,30.4a8.531,8.531,0,0,1-4.414,1.089,6.4,6.4,0,0,1-3.192-.781,5.466,5.466,0,0,1-2.157-2.211A6.837,6.837,0,0,1,17.786,31.4a5.882,5.882,0,0,1-5.049-2.716,8.889,8.889,0,0,1-1.255-3.146,13.567,13.567,0,0,1-.164-4.1,19.064,19.064,0,0,1,1.25-5.026,13.662,13.662,0,0,1,2.311-3.85A9.775,9.775,0,0,1,18.055,10.1a8.864,8.864,0,0,1,3.863-.858,12.012,12.012,0,0,1,2.311.2,9.458,9.458,0,0,1,1.793.538,9.7,9.7,0,0,1,1.486.784c.453.292.909.594,1.363.9L27.749,24.575a4.292,4.292,0,0,0,.033,1.511,2.115,2.115,0,0,0,.461.932,1.66,1.66,0,0,0,.748.487,2.777,2.777,0,0,0,2.628-.517A5.6,5.6,0,0,0,33.029,25.2a11.549,11.549,0,0,0,.948-2.7,18.491,18.491,0,0,0,.415-3.356,21.447,21.447,0,0,0-.528-6.271,12.466,12.466,0,0,0-2.321-4.852A10.778,10.778,0,0,0,27.382,4.9a15.1,15.1,0,0,0-6.061-1.109,13.383,13.383,0,0,0-5.995,1.307,13.754,13.754,0,0,0-4.555,3.622A17.384,17.384,0,0,0,7.79,14.164a24.555,24.555,0,0,0-1.255,6.789,22.575,22.575,0,0,0,.64,6.927,12.511,12.511,0,0,0,2.531,4.965,10.562,10.562,0,0,0,4.288,2.982,16.45,16.45,0,0,0,5.918.989A20.269,20.269,0,0,0,23.8,36.4c.64-.128,1.248-.282,1.827-.451a13.748,13.748,0,0,0,1.573-.564l.812,3.653a9.015,9.015,0,0,1-1.76.871,16.942,16.942,0,0,1-2.08.6A20.3,20.3,0,0,1,19.823,41,22.785,22.785,0,0,1,11.9,39.721a14.579,14.579,0,0,1-5.774-3.8,15.945,15.945,0,0,1-3.466-6.269,26.739,26.739,0,0,1-.968-8.7A26.54,26.54,0,0,1,3.358,12.6,20.669,20.669,0,0,1,7.37,5.966a18.281,18.281,0,0,1,6.12-4.378A19.162,19.162,0,0,1,21.416,0,20.005,20.005,0,0,1,29.1,1.376,14.938,14.938,0,0,1,34.64,5.244a15.875,15.875,0,0,1,3.289,5.977A22.853,22.853,0,0,1,38.821,18.922Zm-22,2.511a8.715,8.715,0,0,0,.451,4.322,2.317,2.317,0,0,0,2.229,1.46,2.462,2.462,0,0,0,.763-.141,2.722,2.722,0,0,0,.879-.528,4.689,4.689,0,0,0,.892-1.076,8.257,8.257,0,0,0,.82-1.819l.876-10.032a5.234,5.234,0,0,0-1.363-.179,4.712,4.712,0,0,0-2.267.52,4.488,4.488,0,0,0-1.606,1.527A8.966,8.966,0,0,0,17.427,18a21.3,21.3,0,0,0-.6,3.433Z" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/972546904554" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 43 41" fill="none" aria-hidden="true"><path d="M33.921,23.624c-.886-.442-5.2-2.553-6.007-2.844s-1.393-.442-1.982.442-2.27,2.839-2.78,3.422-1.028.618-1.9.221a23.9,23.9,0,0,1-7.076-4.373,26.715,26.715,0,0,1-4.888-6.1c-.512-.883-.056-1.369.383-1.811.4-.4.886-1.016,1.328-1.54a7.465,7.465,0,0,0,.875-1.461A1.619,1.619,0,0,0,11.8,8.042c-.221-.442-1.979-4.77-2.715-6.5C8.377-.174,7.65.044,7.105.044,6.6,0,6.013,0,5.424,0A3.319,3.319,0,0,0,3.077,1.057,9.83,9.83,0,0,0,0,8.345c0,4.284,3.151,8.436,3.589,9.055.439.574,6.2,9.408,15.017,13.206,2.1.883,3.74,1.413,5.018,1.852a12.183,12.183,0,0,0,5.536.356c1.69-.268,5.2-2.123,5.936-4.2a7.289,7.289,0,0,0,.53-4.2c-.218-.4-.8-.618-1.678-1.016" transform="translate(7.978) rotate(14)" fill="currentColor"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Arad Ariel. All rights reserved.</p>
+        <p>Built with HTML, CSS &amp; JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site.js" defer></script>
+</body>
 </html>
