@@ -8,7 +8,7 @@ const promiseFunc = () => {
             if (requesT.status == 200) {
                 resolve(requesT.response)
             } else {
-                reject(error)
+                reject(new Error(`Request failed with status: ${requesT.status}`))
             }
         };
         requesT.open('GET', linkApi);
@@ -61,31 +61,45 @@ const transferJson = async (data) => {
 //Prints the photos and gets the info from the linkApi the Global Varibale// 
 
 
+let isLoading = false;
+
 const data = async () => {
+    if (isLoading) return;
+    isLoading = true;
     try {
 
         let data = await promiseFunc(linkApi)
         console.log(data);
         console.log(data.results);
-        transferJson(data);
+        await transferJson(data);
     } catch (err) {
         console.log(err);
+    } finally {
+        isLoading = false;
     }
 };
 
-
-
+const showNewPhotosPopup = () => {
+    const popup = document.getElementById("popup");
+    popup.style.display = "flex";
+};
 
 
 
 window.addEventListener("load", () => {
   data();
+
+  document.getElementById("close-button").addEventListener("click", () => {
+    document.getElementById("popup").style.display = "none";
+  });
+
   window.addEventListener("scroll", () => {
-    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
-      data();
-      alert("New Photos") 
+    if (isLoading) return;
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 50) {
+      data().then(showNewPhotosPopup);
     }
-  })})
+  });
+});
 
 
 

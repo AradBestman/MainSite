@@ -106,5 +106,10 @@ window.addEventListener("load", () => {
     document.getElementById("playAgainBtn").addEventListener("click", () => {
         newGame();
     });
+    for (let closeBtn of close) {
+        closeBtn.addEventListener("click", () => {
+            popup.style.display = "none";
+        });
+    }
 });
 

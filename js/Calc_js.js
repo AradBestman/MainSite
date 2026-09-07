@@ -8,8 +8,16 @@ let n1, n2, operation;
 
 window.addEventListener("load", () => {
     operation = getRandomOperation();
-    n1 = getRandomIntInclusive(1, 10);
-    n2 = getRandomIntInclusive(1, 10);
+
+    if (operation === "divide") {
+        // Build the pair so the division always lands on a whole number.
+        n2 = getRandomIntInclusive(1, 10);
+        const quotient = getRandomIntInclusive(1, 10);
+        n1 = n2 * quotient;
+    } else {
+        n1 = getRandomIntInclusive(1, 10);
+        n2 = getRandomIntInclusive(1, 10);
+    }
 
     // Display the operation symbol based on the randomly selected operation.
     let operationSymbol;

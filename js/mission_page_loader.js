@@ -77,9 +77,19 @@ const GetDataFromStorage = () => {
   let newElmsArr = []; // clear the array
   let jsonString = localStorage.getItem("tags"); //This line retrieves a JSON string stored in the localStorage under the key "tags" and stores it in the variable jsonStr. This string likely contains data you want to work with.//
   console.log("jsonStr", jsonString);
-  newElmsArr = JSON.parse(jsonString); //convert from json to array
+
+  if (!jsonString) {
+    return; // nothing saved yet
+  }
+
+  try {
+    newElmsArr = JSON.parse(jsonString); //convert from json to array
+  } catch (err) {
+    console.error("Could not parse saved tags", err);
+    return;
+  }
   console.log("newElmsArr", newElmsArr);
-  for (let item of newElmsArr) {
+  for (let item of newElmsArr || []) {
 
     createElm(
       item.tagName,
@@ -145,7 +155,8 @@ window.addEventListener("load", () => {
   });
   document.getElementById("clearBtn").addEventListener("click", () => {
     clearPage();
-    localStorage.setItem("tags", "");
+    elmsArr = [];
+    localStorage.setItem("tags", JSON.stringify([]));
   });
   GetDataFromStorage();
 });
