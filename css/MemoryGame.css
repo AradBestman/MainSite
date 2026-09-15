@@ -6,6 +6,180 @@
     box-sizing: border-box;
 }
 
+/* Setup screen */
+.setup-screen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.setup-card {
+    width: 100%;
+    max-width: 420px;
+    background: #fff;
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 28px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.setup-card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+}
+
+.setup-sub {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.setup-field {
+    text-align: left;
+    margin-bottom: 14px;
+}
+
+.setup-field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.setup-field input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#startBtn {
+    width: 100%;
+    margin-top: 6px;
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .2), 0 3px 8px 0 rgba(0, 0, 0, .15);
+    background-color: #00f7ff;
+    border-radius: 12px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 12px 20px;
+    text-align: center;
+    transition: 200ms;
+    border: 0;
+    font-size: 16px;
+}
+
+#startBtn:hover,
+#startBtn:focus-visible {
+    filter: brightness(0.95);
+}
+
+/* Scoreboard */
+.scoreboard {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.player-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 16px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background: #fff;
+    min-width: 140px;
+    transition: 200ms;
+}
+
+.player-card.active-turn {
+    border-color: #00b7bf;
+    background-color: #e6fdff;
+    box-shadow: 0 0 0 3px rgba(0, 247, 255, .35);
+}
+
+.player-card-name {
+    font-weight: bold;
+    word-break: break-word;
+}
+
+.player-card-rounds {
+    font-size: 0.85rem;
+    color: #444;
+}
+
+.round-info {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Overlays */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.overlay-card {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 28px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.overlay-card h2 {
+    margin-bottom: 10px;
+}
+
+.overlay-card p {
+    margin-bottom: 18px;
+}
+
+#nextRoundBtn,
+#newMatchBtn {
+    width: 100%;
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .2), 0 3px 8px 0 rgba(0, 0, 0, .15);
+    background-color: #00f7ff;
+    border-radius: 12px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 12px 20px;
+    text-align: center;
+    transition: 200ms;
+    border: 0;
+    font-size: 16px;
+}
+
+#nextRoundBtn:hover,
+#newMatchBtn:hover,
+#nextRoundBtn:focus-visible,
+#newMatchBtn:focus-visible {
+    filter: brightness(0.95);
+}
+
 .container-row {
     width: 100%;
     display: grid;
