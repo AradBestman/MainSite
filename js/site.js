@@ -111,7 +111,13 @@
     if (!form) return;
 
     const status = form.querySelector(".form-status");
-    const to = form.dataset.mailto || "";
+    const serviceId = form.dataset.emailjsService || "";
+    const templateId = form.dataset.emailjsTemplate || "";
+    const publicKey = form.dataset.emailjsPublicKey || "";
+
+    if (window.emailjs && publicKey) {
+      window.emailjs.init({ publicKey });
+    }
 
     const setError = (field, message) => {
       const wrap = field.closest(".field");
@@ -165,18 +171,33 @@
       }
 
       const phone = form.querySelector("#phone");
-      const subject = encodeURIComponent(`Portfolio contact from ${name.value.trim()}`);
-      const bodyLines = [
-        `Name: ${name.value.trim()}`,
-        `Email: ${email.value.trim()}`,
-        phone && phone.value.trim() ? `Phone: ${phone.value.trim()}` : null,
-        "",
-        message.value.trim(),
-      ].filter((line) => line !== null);
-      const body = encodeURIComponent(bodyLines.join("\n"));
+      const submitBtn = form.querySelector("button[type='submit']");
 
-      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-      status.textContent = "Opening your email app to send this message…";
+      if (!window.emailjs || !serviceId || !templateId || !publicKey) {
+        status.textContent = "Sorry, the contact form isn't configured correctly. Please try again later.";
+        return;
+      }
+
+      submitBtn.disabled = true;
+      status.textContent = "Sending…";
+
+      window.emailjs
+        .send(serviceId, templateId, {
+          fullname: name.value.trim(),
+          email: email.value.trim(),
+          phone: phone && phone.value.trim() ? phone.value.trim() : "—",
+          message: message.value.trim(),
+        })
+        .then(() => {
+          status.textContent = "Thanks! Your message has been sent.";
+          form.reset();
+        })
+        .catch(() => {
+          status.textContent = "Something went wrong sending your message. Please try again or email directly.";
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+        });
     });
   };
 

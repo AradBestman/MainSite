@@ -86,14 +86,17 @@
         <div class="about-body" style="max-width: var(--container-narrow); margin-left: auto;">
           <p>
             I build for the web with HTML, CSS and JavaScript at the core, and reach for
-            React, Node and TypeScript when a project calls for it. Most of the work on
-            this site is exactly that: landing pages built from scratch, and small browser
-            apps — a calculator, a memory game, a Pokédex pulling live data from an API —
-            each one built to actually work, not just look finished.
+            React, Node and TypeScript when a project calls for it. Each project is built
+            to actually work, not just look finished.
           </p>
           <p>
             I care about clean structure as much as visual polish: semantic markup,
             readable CSS, and JavaScript that does only what it needs to.
+          </p>
+          <p>
+            I build websites and landing pages, using libraries like React.js and Next.js,
+            along with whatever else a given project calls for. I also use n8n to integrate
+            different applications, and work with AI agents.
           </p>
           <!-- TODO(arad): replace with real bio — years active, focus areas, availability -->
         </div>
@@ -197,7 +200,7 @@
 
           <div class="work-row js-reveal">
             <p class="work-row-num font-mono">06</p>
-            <h3 class="work-row-title"><a href="TemplateHugeman.html">Huge Man</a></h3>
+            <h3 class="work-row-title"><a href="TemplateHugeman.html">Hangman</a></h3>
             <div class="work-row-tags"><span>JavaScript</span></div>
             <svg class="work-row-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <div class="work-row-thumb"><img src="images/HugeMan.png" alt="" loading="lazy" decoding="async" /></div>
@@ -215,7 +218,7 @@
             <h2 style="margin-bottom: var(--space-3);">Get in touch</h2>
             <p class="section-intro" style="margin-bottom: var(--space-8);">Have a project in mind, or just want to say hi? Send a message below.</p>
 
-            <form class="contact-form" data-mailto="rdrl20014@gmail.com" novalidate>
+            <form class="contact-form" data-emailjs-service="service_77zj6ps" data-emailjs-template="template_puqq3se" data-emailjs-public-key="2JkmUSHjIL9Rq7EOr" novalidate>
               <div class="field">
                 <label for="fullname">Full name</label>
                 <input class="" type="text" id="fullname" name="fullname" autocomplete="name" required />
@@ -288,6 +291,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
   <script src="js/site.js" defer></script>
 </body>
 </html>
