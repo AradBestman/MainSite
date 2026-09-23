@@ -1,114 +1,76 @@
+(() => {
+  "use strict";
 
-let linkApi = "https://pokeapi.co/api/v2/pokemon/";
+  let nextPageUrl = "https://pokeapi.co/api/v2/pokemon/";
+  let isLoading = false;
 
-const promiseFunc = () => {
-    return new Promise((resolve, reject) => {
-        const requesT = new XMLHttpRequest();
-        requesT.onload = () => {
-            if (requesT.status == 200) {
-                resolve(requesT.response)
-            } else {
-                reject(new Error(`Request failed with status: ${requesT.status}`))
-            }
-        };
-        requesT.open('GET', linkApi);
-        requesT.send();
-    });
-};
-const fetchPokemonDetails = (url) => {
-  return new Promise((resolve, reject) => {
-    const request = new XMLHttpRequest();
-    request.onload = () => {
-      if (request.status === 200) {
-        resolve(request.response);
-      } else {
-        reject(new Error(`Request failed with status: ${request.status}`));
-      }
-    };
-    request.open("GET", url);
-    request.send();
-  });
-};
+  const container = document.querySelector("#container");
+  const popup = document.getElementById("popup");
 
-
-const transferJson = async (data) => {
-  let dataObj = JSON.parse(data);
-
-  let myContainer = document.querySelector("#container");
-  for (let object of dataObj.results) {
-    try {
-      const pokemonData = await fetchPokemonDetails(object.url); // Fetch each Pokémon's details
-      const pokemonObj = JSON.parse(pokemonData);
-
-      let image = document.createElement("img");
-      image.setAttribute("src", pokemonObj.sprites.front_default);
-
-      let card = document.createElement("div");
-      card.classList.add("card");
-      let name = document.createElement("p");
-      name.innerHTML = pokemonObj.name;
-      card.appendChild(image);
-      name.classList.add("title");
-      card.appendChild(name);
-      myContainer.appendChild(card);
-    } catch (error) {
-      console.error(error);
+  const fetchJson = async (url) => {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Request failed with status: ${response.status}`);
     }
-  }
+    return response.json();
+  };
 
-  linkApi = dataObj.next;
-};
-//Prints the photos and gets the info from the linkApi the Global Varibale// 
+  const renderPokemonCard = (pokemon) => {
+    const image = document.createElement("img");
+    image.src = pokemon.sprites.front_default;
 
+    const name = document.createElement("p");
+    name.textContent = pokemon.name;
+    name.classList.add("title");
 
-let isLoading = false;
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.append(image, name);
 
-const data = async () => {
+    container.appendChild(card);
+  };
+
+  const renderPage = async (page) => {
+    for (const entry of page.results) {
+      try {
+        const pokemon = await fetchJson(entry.url);
+        renderPokemonCard(pokemon);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    nextPageUrl = page.next;
+  };
+
+  const loadNextPage = async () => {
     if (isLoading) return;
     isLoading = true;
+
     try {
-
-        let data = await promiseFunc(linkApi)
-        console.log(data);
-        console.log(data.results);
-        await transferJson(data);
-    } catch (err) {
-        console.log(err);
+      const page = await fetchJson(nextPageUrl);
+      await renderPage(page);
+    } catch (error) {
+      console.error(error);
     } finally {
-        isLoading = false;
+      isLoading = false;
     }
-};
+  };
 
-const showNewPhotosPopup = () => {
-    const popup = document.getElementById("popup");
+  const showNewPhotosPopup = () => {
     popup.style.display = "flex";
-};
+  };
 
+  const isNearBottom = () =>
+    window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 50;
 
-
-window.addEventListener("load", () => {
-  data();
+  loadNextPage();
 
   document.getElementById("close-button").addEventListener("click", () => {
-    document.getElementById("popup").style.display = "none";
+    popup.style.display = "none";
   });
 
   window.addEventListener("scroll", () => {
-    if (isLoading) return;
-    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 50) {
-      data().then(showNewPhotosPopup);
-    }
+    if (isLoading || !isNearBottom()) return;
+    loadNextPage().then(showNewPhotosPopup);
   });
-});
-
-
-
-
-
-
-
-
-
-
-
-
+})();

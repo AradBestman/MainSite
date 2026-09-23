@@ -1,115 +1,71 @@
-let whoPlayNow; 
-let popup = document.querySelector("#popup");
-let close = document.querySelectorAll('.close');
+(() => {
+  "use strict";
 
-const ifEndGame = () => {
+  const WIN_PATTERNS = [
+    [0, 1, 2], [3, 4, 5], [6, 7, 8], // rows
+    [0, 3, 6], [1, 4, 7], [2, 5, 8], // columns
+    [0, 4, 8], [2, 4, 6],            // diagonals
+  ];
 
-    let whoWonTheGame;
- 
-    let cells = document.querySelectorAll("#gamerDiv > div"); // get all cells
-    if (!cells || cells.length !== 9) {
-        return;
-    }
-    //*check vertical
-   
-    for (let i = 0; i <= 2; i++) {
-        if (
-            cells[i].innerHTML == cells[i + 3].innerHTML &&
-            cells[i + 3].innerHTML == cells[i + 6].innerHTML &&
-            cells[i].innerHTML
-        ) {
-            
-            whoWonTheGame = cells[i].innerHTML;
-        }
-    }
-    //*check horizontal
-    for (let i = 0; i < 9; i += 3) {
-        // i += 3 => i = i + 3
-        if (
-            cells[i].innerHTML == cells[i + 1].innerHTML &&
-            cells[i + 1].innerHTML == cells[i + 2].innerHTML &&
-            cells[i].innerHTML
-        ) {
-            
-            whoWonTheGame = cells[i].innerHTML;
-        }
-    }
-    //*check diagonal
-    // \
-    let i = 0;
-    if (
-        cells[i].innerHTML == cells[i + 4].innerHTML &&
-        cells[i + 4].innerHTML == cells[i + 8].innerHTML &&
-        cells[i].innerHTML
-    ) {
-        
-        whoWonTheGame = cells[i].innerHTML;
-    }
-    i = 2;
-    if (
-        cells[i].innerHTML == cells[i + 2].innerHTML &&
-        cells[i + 2].innerHTML == cells[i + 4].innerHTML &&
-        cells[i].innerHTML
-    ) {
-        
-        whoWonTheGame = cells[i].innerHTML;
-    }
-    //*check if game end and someone won or even
+  const popup = document.querySelector("#popup");
+  const closeButtons = document.querySelectorAll(".close");
+  const cells = document.querySelectorAll("#gamerDiv > div");
+  const playAgainBtn = document.getElementById("playAgainBtn");
 
-    if (whoWonTheGame) {
-        popup.style.display = "block";
-        popup.innerHTML = `${whoWonTheGame} won the game`;
-    } else {
-        for (let cell of cells) {
-            if (!cell.innerHTML) {
-                return; 
-            }
-        }
-        popup.style.display = "block";
-        popup.innerHTML = "no one won the game";
+  let currentPlayer;
+
+  const getWinner = () => {
+    for (const [a, b, c] of WIN_PATTERNS) {
+      const mark = cells[a].textContent;
+      if (mark && mark === cells[b].textContent && mark === cells[c].textContent) {
+        return mark;
+      }
     }
-};
+    return null;
+  };
 
-const handleClickXO = (myE) => {
+  const showPopup = (message) => {
+    popup.textContent = message;
+    popup.style.display = "block";
+  };
 
-    if (myE.target.innerHTML != "") {
-        //the div has x or o
-        return; // stop here
+  const checkGameEnd = () => {
+    const winner = getWinner();
+    if (winner) {
+      showPopup(`${winner} won the game`);
+      return;
     }
-    
-    myE.target.innerHTML = whoPlayNow;
-    whoPlayNow == "x" ? (whoPlayNow = "o") : (whoPlayNow = "x");
-    ifEndGame();
-};
 
-const initPageLoad = () => {
-    //set click on every cell
-    let cells = document.querySelectorAll("#gamerDiv > div");
-    for (let myDiv of cells) {
-        myDiv.addEventListener("click", handleClickXO);
+    const boardIsFull = [...cells].every((cell) => cell.textContent);
+    if (boardIsFull) {
+      showPopup("no one won the game");
     }
-};
+  };
 
-const newGame = () => {
-    whoPlayNow = "x"; 
-    let cells = document.querySelectorAll("#gamerDiv > div"); 
-    for (let cell of cells) {
-        cell.innerHTML = "";
-        
-    }
-    popup.style.display = "none";
-};
+  const handleCellClick = (e) => {
+    const cell = e.target;
+    if (cell.textContent) return; // already played
 
-window.addEventListener("load", () => {
-    initPageLoad();
-    newGame();
-    document.getElementById("playAgainBtn").addEventListener("click", () => {
-        newGame();
+    cell.textContent = currentPlayer;
+    currentPlayer = currentPlayer === "x" ? "o" : "x";
+    checkGameEnd();
+  };
+
+  const newGame = () => {
+    currentPlayer = "x";
+    cells.forEach((cell) => {
+      cell.textContent = "";
     });
-    for (let closeBtn of close) {
-        closeBtn.addEventListener("click", () => {
-            popup.style.display = "none";
-        });
-    }
-});
+    popup.style.display = "none";
+  };
 
+  cells.forEach((cell) => cell.addEventListener("click", handleCellClick));
+  playAgainBtn.addEventListener("click", newGame);
+  closeButtons.forEach((btn) =>
+    btn.addEventListener("click", () => {
+      popup.style.display = "none";
+    })
+  );
+
+  newGame();
+})();
